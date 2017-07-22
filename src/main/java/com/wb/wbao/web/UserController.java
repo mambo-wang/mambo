@@ -20,5 +20,4 @@ public class UserController {
         user.setUsername("wang");
         return user;
     }
-
 }
