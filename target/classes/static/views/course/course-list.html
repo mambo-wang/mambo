@@ -1,0 +1,10 @@
+<div class="form-group">
+
+    <div><label>课程：</label><select class="form-control" ng-model="selected" ng-options="course.name for course in courseList">
+        <option value="">-- 请选择 --</option>
+    </select></div>
+
+</div>
+<h2 ng-if="selected">您<mark>选择了</mark>{{selected.name}}</h2>
+
+<h3>今天别忘记<mark>打酱油</mark></h3>

@@ -1,0 +1,21 @@
+nav{
+    background: #cccccc;
+    height: 50px;
+}
+.panel-heading{
+    margin:0;
+    padding: 0;
+}
+
+.panel-heading>.list-inline{
+    background: #ccc;
+    margin: 0;
+}
+.panel-heading>.list-inline li a{
+    color:blue;
+    font-weight: bold;
+}
+
+.register li a{
+    color:#111;
+}
