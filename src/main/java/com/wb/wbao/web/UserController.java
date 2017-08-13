@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by dell on 2017/7/2.
+ * 控制器
  */
 @RestController
 @RequestMapping("/users")
