@@ -6,6 +6,3 @@ this project order to study spring boot and other technology about java language
 1
 2
 3
-4
-5
-6
