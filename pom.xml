@@ -2,12 +2,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--指定了当前pom的版本-->
     <modelVersion>4.0.0</modelVersion>
 
+    <!--反写的公司网址+项目名-->
     <groupId>com.wb.wbao</groupId>
+    <!--项目名+模块名-->
     <artifactId>girl</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
+    <!--第一个0表示大版本号，第二个0表示分支版本号，第三个0表示小版本号
+    snapshot快照
+    alpha内部测试
+    beta公测
+    release稳定版本
+    GA正式版本-->
+    <version>0.0.1-SNAPSHOT</version>
+    <!--默认是jar包，还有war、zip、pom-->
+    <packaging>war</packaging>
+    <!--项目描述名-->
+    <name>宝宝的第一个spring boot 开源项目</name>
+    <!--spring boot 父级依赖-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -15,15 +28,22 @@
         <relativePath/>
     </parent>
 
+    <!---->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
+        <!--spring MVC依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
         <dependency>
