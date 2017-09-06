@@ -1,32 +1,12 @@
 angular.module("controllers", [])
-    .controller("RegisterController", ['$scope','$state', function ($scope,$state) {
-        $scope.user = {};
-        $scope.register = function(){
-            $state.go('login');
-        }
-
-    }])
-    .controller('LoginController', ['$scope','$state', function ($scope,$state) {
-
-        $scope.user = {};
-        $scope.cannot = false;
-        $scope.login = function(){
-            if($scope.user.username == "wang" && $scope.user.password == "1992"){
-                $state.go('app.welcome');
-            }else{
-                $scope.cannot = true;
-            }
-        }
-
-    }])
     .controller("PracticeController", ["$scope", function ($scope) {
         $scope.listItems = ["能力", "智慧", "亲啦"];
     }])
     .controller("BlogController", ["$scope", function ($scope) {
         $scope.ListThings = ["robot", "cat", "icecream"];
     }])
-    .controller("WelcomeController", ['$scope','$http','$resource', function ($scope,$http,$resource) {
-        $scope.loginUser = $resource('/wang/users/1').get();
+    .controller("WelcomeController", ['$rootScope', '$scope','$http','$resource', function ($rootScope, $scope,$http,$resource) {
+        $scope.loginUser = $rootScope.loginUser;
 
     }])
     .controller("H5CSS3Controller", ["$scope", function ($scope) {

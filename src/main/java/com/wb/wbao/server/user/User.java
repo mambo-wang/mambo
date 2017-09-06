@@ -1,4 +1,4 @@
-package com.wb.wbao.user;
+package com.wb.wbao.server.user;
 
 import javax.persistence.*;
 

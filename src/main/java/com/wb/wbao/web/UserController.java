@@ -1,7 +1,7 @@
 package com.wb.wbao.web;
 
-import com.wb.wbao.user.User;
-import com.wb.wbao.user.UserMgr;
+import com.wb.wbao.server.user.User;
+import com.wb.wbao.server.user.UserMgr;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

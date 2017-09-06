@@ -254,7 +254,7 @@ ul .share-group{
 
 .main-wrapper{
     /*背景图路径*/
-    background: #444 url(../img/banner.jpg);
+    background: #444 url(img/banner.jpg);
     /*页面滚动背景图固定*/
     background-attachment: fixed;
     /*图片不重复显示*/

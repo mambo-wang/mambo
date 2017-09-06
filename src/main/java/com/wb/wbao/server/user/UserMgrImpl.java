@@ -1,4 +1,4 @@
-package com.wb.wbao.user;
+package com.wb.wbao.server.user;
 
 import org.springframework.stereotype.Service;
 
@@ -38,6 +38,6 @@ public class UserMgrImpl implements UserMgr {
 
     @Override
     public User queryUserByLoginNameAndPassword(String loginName, String password) {
-        return userDao.findUserByLoginNameAndPassword(loginName, password);
+        return userDao.findByLoginNameAndPassword(loginName, password);
     }
 }

@@ -1,7 +1,7 @@
 package com.wb.wbao.unitest;
 
-import com.wb.wbao.user.User;
-import com.wb.wbao.user.UserMgr;
+import com.wb.wbao.server.user.User;
+import com.wb.wbao.server.user.UserMgr;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
