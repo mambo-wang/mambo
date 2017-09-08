@@ -16,7 +16,7 @@
 
                 if(loginUser.data!==null){
                     console.error("登陆成功");
-                    $rootScope.loginUser = loginUser;
+                    $rootScope.loginUser = loginUser.data;
                     $state.go("app.welcome");
                 }else {
                     $scope.pass = false;
@@ -35,8 +35,7 @@
 
                 $scope.register = function () {
 
-                    $resource('/mambo/users').save({},$scope.user,function (data) {
-                        console.info(data);
+                    $resource('/mambo/users').save({},$scope.user,function () {
                         $state.go("login");
                     })
 
