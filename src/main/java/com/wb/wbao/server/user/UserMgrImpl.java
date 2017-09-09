@@ -1,5 +1,7 @@
 package com.wb.wbao.server.user;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -11,8 +13,11 @@ public class UserMgrImpl implements UserMgr {
     @Resource
     private UserDao userDao;
 
+    private Logger logger = LoggerFactory.getLogger(UserMgrImpl.class);
+
     @Override
     public List<User> queryAll() {
+        logger.debug("query all user");
         return userDao.findAll();
     }
 
