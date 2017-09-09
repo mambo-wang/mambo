@@ -1,0 +1,51 @@
+<div class="panel panel-default">
+
+    <header class="row">
+        <div class="col-md-6">
+            <span class="active">{{header}}</span>
+        </div>
+    </header>
+
+    <div class="panel-body">
+        <form class="form-horizontal" name="editUserForm" ng-submit="save()">
+            <!--登录名-->
+            <div class="form-group">
+                <label class="col-md-2 control-label required">登录名</label>
+                <div class="col-md-4" ng-class="editUserForm.loginName.$invalid && editUserForm.loginName.$dirty">
+                    <input type="text" name="loginName" ng-model="user.loginName"
+                           class="form-control" placeholder="请输入您的登录名" required>
+                </div>
+            </div>
+            <!--密码-->
+            <div class="form-group">
+                <label class="col-md-2 control-label required">密码</label>
+                <div class="col-md-4" ng-class="editUserForm.password.$invalid && editUserForm.password.$dirty">
+                    <input type="password" name="password" ng-model="user.password" class="form-control" placeholder="请输入您的邮箱密码" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label required">姓名</label>
+                <div class="col-md-4" ng-class="editUserForm.username.$invalid && editUserForm.username.$dirty">
+                    <input type="text" name="username" ng-model="user.username" class="form-control" placeholder="请输入您的真实姓名" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">入职年份</label>
+                <div class="col-md-4">
+                    <input type="number" max="9999" min="1970" ng-model="user.comeYear" class="form-control" placeholder="请输入您的入职年份">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6 col-md-offset-2">
+                    <button type="submit" class="btn btn-default btn-sm" ng-disabled="editUserForm.$invalid">
+                        注册
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <h3 class="col-md-offset-2">您注册的用户名是{{user.loginName}}</h3>
+        </form>
+    </div>
+</div>
+
+

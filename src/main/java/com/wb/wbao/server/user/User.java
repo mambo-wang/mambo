@@ -57,4 +57,12 @@ public class User {
     public void setLoginName(String loginName) {
         this.loginName = loginName;
     }
+
+    public Integer getComeYear() {
+        return comeYear;
+    }
+
+    public void setComeYear(Integer comeYear) {
+        this.comeYear = comeYear;
+    }
 }

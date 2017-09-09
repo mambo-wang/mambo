@@ -38,6 +38,15 @@ angular.module('app')
             url: '/welcome',
             templateUrl: 'dashboard/welcome.html',
             controller:'WelcomeController'
-        });
+        })
+        .state('app.userList', {
+            url: '/userList',
+            templateUrl: 'user/user.html',
+            controller:'UserController'
+    }) .state('app.user-edit', {
+            url: '/addUser/:editType/:userId',
+            templateUrl: 'user/user-edit.html',
+            controller:'UserController'
+    });
     $urlRouterProvider.otherwise('/login');
 }]);

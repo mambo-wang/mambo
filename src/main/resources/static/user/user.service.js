@@ -3,10 +3,15 @@
   'use strict';
 
   angular.module('app').factory('UserService', ['$resource', function ($resource) {
-    return $resource('/users/:id', null,
-        {
-          'update': {method: 'PUT'}
-        });
+    var extMethod = {
+        'update': {method: 'PUT'},
+        'download':{
+            method:'GET',
+            isArray:true,
+            params:{secondaryUrl:'downloads'}
+        }
+    };
+    return $resource('/mambo/users/:id:idList:secondaryUrl', null, extMethod);
   }]);
 
 })();
