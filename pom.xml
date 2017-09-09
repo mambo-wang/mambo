@@ -201,6 +201,7 @@
     </build>
 
 
+    <!--加几个仓库-->
     <repositories>
         <repository>
             <id>alimaven</id>
