@@ -15,12 +15,7 @@ angular.module('app')
             templateUrl: 'login/register.html',
             controller:'RegisterController'
         })
-        .state('login', {
-            url: '/login',
-            templateUrl: 'login/login.html',
-            controller:'LoginController'
-        })
-        .state('practice', {
+         .state('practice', {
             url: '/practice',
             templateUrl: 'views/ownh5css3.html',
             controller: 'PracticeController'
@@ -32,11 +27,12 @@ angular.module('app')
         })
         .state('app', {
             url: '/app',
-            templateUrl: 'views/app.html'
+            templateUrl: 'common/app/app.html',
+            controller:'AppCtrl'
         })
         .state('app.welcome', {
-            url: '/welcome',
-            templateUrl: 'dashboard/welcome.html',
+            url: '/app/welcome',
+            templateUrl: '../js/dashboard/welcome.html',
             controller:'WelcomeController'
         })
         .state('app.userList', {
@@ -48,5 +44,5 @@ angular.module('app')
             templateUrl: 'user/user-edit.html',
             controller:'UserController'
     });
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/app/welcome');
 }]);

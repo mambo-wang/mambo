@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Mambo</title>
+    <link rel="stylesheet" href="common/css/main.css">
+    <link rel="stylesheet" href="blog/blog.css">
+    <link rel="stylesheet" href="common/css/bootstrap.css">
+    <link rel="stylesheet" href="common/css/font-awesome.css">
+
+</head>
+<body ng-controller="LoginController as loginVm">
+
+<div class="panel panel-default">
+
+    <div class="panel-body">
+        <form class="form-horizontal" ng-submit="loginVm.login()" ondragstart="return false" name="loginForm"
+              autocomplete="off">
+            <!--登录名-->
+            <div class="form-group">
+                <label class="col-md-2 control-label required">登录名</label>
+                <div class="col-md-4">
+                    <input type="text" name="loginName" ng-model="loginVm.user.loginName"
+                           class="form-control" placeholder="请输入您的yonghu名" required>
+                </div>
+            </div>
+            <!--密码-->
+            <div class="form-group">
+                <label class="col-md-2 control-label required">密码</label>
+                <div class="col-md-4">
+                    <input type="password" name="password" ng-model="loginVm.user.password" class="form-control"
+                           placeholder="请输入您的邮箱密码"
+                           required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4 col-md-offset-2">
+                    <input type="submit" value="登录" class="btn btn-default btn-sm">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--angular-->
+<script src="common/js/jquery-1.9.1.js"></script>
+<script src="common/js/angular.js"></script>
+<script src="common/js/angular-ui-router.js"></script>
+<script src="common/js/angular-resource.js"></script>
+<script src="common/js/bootstrap.js"></script>
+<!--app-->
+<script src="common/login/login.app.js"></script>
+<script src="common/login/login.service.js"></script>
+<script src="common/login/login.js"></script>
+</body>
+</html>

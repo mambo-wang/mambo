@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cn" ng-app="app">
 <head>
     <title>index</title>
     <meta charset="utf-8">
@@ -9,19 +9,18 @@
     <link rel="stylesheet" href="common/css/font-awesome.css">
     <link rel="stylesheet" href="common/css/h5-css3.css">
 </head>
-<body ng-app="app">
-<div ui-view></div>
+<body ng-controller="AppCtrl as appVm" ondragstart="return false">
+<div id="app" ui-view></div>
 <script src="common/js/jquery-1.9.1.js"></script>
 <script src="common/js/angular.js"></script>
 <script src="common/js/angular-ui-router.js"></script>
-<script src="common/js/controllers.js"></script>
-<script src="common/js/app.js"></script>
+<script src="common/app/controllers.js"></script>
+<script src="common/app/app.js"></script>
+<script src="common/app/main.js"></script>
 <script src="common/js/angular-resource.js"></script>
 <script src="common/js/bootstrap.js"></script>
-<script src="login/login.js"></script>
-<script src="dashboard/welcome.js"></script>
-<script src="common/js/config.router.js"></script>
-<script src="user/user.service.js"></script>
-<script src="user/user.js"></script>
+<script src="common/app/config.router.js"></script>
+<script src="common/user/user.service.js"></script>
+<script src="common/user/user.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.wb.wbao.web;
+package com.wb.wbao.web.user;
 
 import com.wb.wbao.server.user.User;
 import com.wb.wbao.server.user.UserMgr;

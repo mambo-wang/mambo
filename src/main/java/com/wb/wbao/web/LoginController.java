@@ -1,47 +1,67 @@
 package com.wb.wbao.web;
 
-import com.wb.wbao.common.Result;
+import com.wb.wbao.dto.CommonDTO;
 import com.wb.wbao.server.user.User;
 import com.wb.wbao.server.user.UserMgr;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 
-@RestController
-@RequestMapping("/login")
+@Controller
 public class LoginController {
+
+    public static final String SIGN_IN_PAGE = "signin.html";
+
+    public static final String HOME_PAGE = "home.html";
 
     @Resource
     private UserMgr userMgr;
 
-    Logger logger = LoggerFactory.getLogger(LoginController.class);
-
-    @PostMapping
-    public User login(@RequestBody User user){
-
-        return userMgr.queryUserByLoginNameAndPassword(user.getLoginName(), user.getPassword());
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public ModelAndView login(ModelAndView mv) {
+        mv.setViewName(SIGN_IN_PAGE);
+        return mv;
     }
 
-    @ApiOperation(value="登录系统", notes="输入用户名密码登录系统")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "loginName", value = "用户名", required = true, dataType = "String"),
-            @ApiImplicitParam(name = "password", value = "用户密码", required = true, dataType = "String")
-    })
-    @GetMapping(value = "/{loginName}/{password}")
-    public Result<User> loginget(@PathVariable String loginName, @PathVariable String password){
-
-        User user =  userMgr.queryUserByLoginNameAndPassword(loginName, password);
-        Result result = new Result();
+    /**
+     * 如果不加@ResponseBody注解的话会报如下错误
+     * javax.servlet.ServletException: Circular view path [login]:
+     * would dispatch back to the current handler URL [/mambo/login] again
+     * @param user
+     * @return
+     */
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @ResponseBody
+    public CommonDTO login(@RequestBody User user) {
+        user.setUsername("未使用shiro");
+        CommonDTO result = new CommonDTO();
+        result.setResult(CommonDTO.Result.SUCCESS);
         result.setData(user);
-        logger.debug("wo ca this is a debug ");
-        logger.info("login with loginName {} and password {}", loginName, password);
-        logger.error("test");
         return result;
+    }
+
+    @GetMapping(value = "/{loginName}/{password}")
+    public CommonDTO<User> loginget(@PathVariable String loginName, @PathVariable String password) {
+
+        User user = userMgr.queryUserByLoginNameAndPassword(loginName, password);
+        CommonDTO commonDTO = new CommonDTO();
+        commonDTO.setData(user);
+        return commonDTO;
+    }
+
+
+        @RequestMapping({"/", "index"})
+    public ModelAndView index(ModelAndView modelAndView) {
+        modelAndView.setViewName(HOME_PAGE);
+        return modelAndView;
+
+    }
+
+    @RequestMapping(value = "/logout")
+    public String logout() {
+        return "signin";
     }
 
 

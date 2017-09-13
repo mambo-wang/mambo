@@ -6,6 +6,9 @@ angular.module("controllers", [])
         $scope.ListThings = ["robot", "cat", "icecream"];
     }])
     .controller("WelcomeController", ['$rootScope', '$scope','$http','$resource', function ($rootScope, $scope,$http,$resource) {
+
+        console.error("登录成功了");
+
         $scope.loginUser = $rootScope.loginUser;
 
     }])
