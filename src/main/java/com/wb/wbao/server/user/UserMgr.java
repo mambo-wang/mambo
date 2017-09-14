@@ -16,4 +16,6 @@ public interface UserMgr {
 
     User queryUserByLoginNameAndPassword(String loginName, String password);
 
+    void sendEmail(User user);
+
 }

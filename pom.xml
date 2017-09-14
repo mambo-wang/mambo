@@ -56,6 +56,12 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
         </dependency>
 
+        <!-- 发送邮件. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
         <!--&lt;!&ndash;&lt;!&ndash;模板依赖&ndash;&gt;&ndash;&gt;-->
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->

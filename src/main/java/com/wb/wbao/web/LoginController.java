@@ -39,6 +39,9 @@ public class LoginController {
         CommonDTO result = new CommonDTO();
         result.setResult(CommonDTO.Result.SUCCESS);
         result.setData(user);
+
+        userMgr.sendEmail(user);
+
         return result;
     }
 
@@ -52,7 +55,7 @@ public class LoginController {
     }
 
 
-        @RequestMapping({"/", "index"})
+    @RequestMapping({"/", "index"})
     public ModelAndView index(ModelAndView modelAndView) {
         modelAndView.setViewName(HOME_PAGE);
         return modelAndView;
