@@ -1,4 +1,4 @@
-angular.module("controllers", [])
+angular.module("app")
     .controller("PracticeController", ["$scope", function ($scope) {
         $scope.listItems = ["能力", "智慧", "亲啦"];
     }])
@@ -8,8 +8,6 @@ angular.module("controllers", [])
     .controller("WelcomeController", ['$rootScope', '$scope','$http','$resource', function ($rootScope, $scope,$http,$resource) {
 
         console.error("登录成功了");
-
-        $scope.loginUser = $rootScope.loginUser;
 
     }])
     .controller("H5CSS3Controller", ["$scope", function ($scope) {

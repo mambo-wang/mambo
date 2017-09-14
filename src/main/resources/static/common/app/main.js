@@ -2,9 +2,8 @@
     'use strict';
 
     function AppCtrl($scope, $http) {
-        var self = this;
 
-        self.loginUser = JSON.parse(sessionStorage.loginUser);
+        $scope.loginUser = JSON.parse(sessionStorage.loginUser);
     }
 
     angular.module('app').controller('AppCtrl', ['$scope', '$http', AppCtrl]);

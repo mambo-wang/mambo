@@ -1,44 +1,45 @@
 (function () {
 
     angular.module('app')
-        .controller('UserController', ['$rootScope', '$scope', '$state', '$resource', 'UserService', '$stateParams',
-            function ($rootScope, $scope, $state, $resource, UserService, $stateParams) {
+        .controller('UserController', ['$rootScope', '$state', 'UserService', '$stateParams',
+            function ($rootScope,  $state, UserService, $stateParams) {
 
                 var isModify = $stateParams.editType === 2;
-                $scope.user = {};
+                var userVm = this;
+                userVm.user = {};
                 activate();
 
                 function activate() {
                     if (isModify) {
-                        $scope.header = "修改用户";
-                        $scope.user = UserService.get({id: $stateParams.userId});
+                        userVm.header = "修改用户";
+                        userVm.user = UserService.get({id: $stateParams.userId});
                     } else {
-                        $scope.header = "增加用户";
+                        userVm.header = "增加用户";
                     }
                 }
 
-                $scope.header = "";
-                $scope.users = [];
+                userVm.header = "";
+                userVm.users = [];
                 queryAll();
 
                 function queryAll() {
                     console.error("获取用户列表");
-                    $scope.users = UserService.query({}, function (data) {
+                    userVm.users = UserService.query({}, function (data) {
                     });
                 }
 
-                $scope.save = save;
+                userVm.save = save;
 
                 function save() {
 
                     if (isModify) {
                         console.error("是修改");
-                        UserService.update({}, $scope.user, function () {
+                        UserService.update({}, userVm.user, function () {
                             $state.go('app.userList');
                         })
                     } else {
                         console.error("是增加");
-                        UserService.save({}, $scope.user, function () {
+                        UserService.save({}, userVm.user, function () {
                             $state.go('app.userList');
                         });
                     }

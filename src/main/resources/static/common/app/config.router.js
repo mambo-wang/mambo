@@ -28,11 +28,13 @@ angular.module('app')
         .state('app.userList', {
             url: '/userList',
             templateUrl: 'common/user/user.html',
-            controller:'UserController'
+            controller:'UserController',
+            controllerAs:'userVm'
     }) .state('app.user-edit', {
             url: '/addUser/:editType/:userId',
             templateUrl: 'common/user/user-edit.html',
-            controller:'UserController'
+            controller:'UserController',
+            controllerAs:'userVm'
     });
     $urlRouterProvider.otherwise('/app/welcome');//这里是.app和.app.welcome的url的拼接
 }]);
