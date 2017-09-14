@@ -22,7 +22,7 @@ angular.module('app')
         })
         .state('app.welcome', {
             url: '/welcome',
-            templateUrl: 'common/app/welcome.html',
+            templateUrl: 'common/dashboard/welcome.html',
             controller:'WelcomeController'
         })
         .state('app.userList', {

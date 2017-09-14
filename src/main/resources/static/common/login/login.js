@@ -16,10 +16,9 @@
                     LoginService.login(sendUser, function (response) {
 
                         if('SUCCESS' === response.result){
-                            console.info(response);
                             sessionStorage.loginUser = JSON.stringify(response.data);
                             location.href = "home.html";
-                            console.info(sessionStorage.loginUser);
+                            console.error(sessionStorage.loginUser);
                         }else {
                             self.errorMessage = response.data;
                         }

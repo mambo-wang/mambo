@@ -35,7 +35,7 @@ public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
     public CommonDTO login(@RequestBody User user) {
-        user.setUsername("未使用shiro");
+        user.setUsername("万事俱备");
         CommonDTO result = new CommonDTO();
         result.setResult(CommonDTO.Result.SUCCESS);
         result.setData(user);
@@ -60,8 +60,9 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/logout")
-    public String logout() {
-        return "signin";
+    public ModelAndView logout(ModelAndView modelAndView) {
+        modelAndView.setViewName(SIGN_IN_PAGE);
+        return modelAndView;
     }
 
 
