@@ -1,6 +1,8 @@
 package com.wb.wbao.server.email;
 
 import com.wb.wbao.server.user.User;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.FileSystemResource;
@@ -8,11 +10,14 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
+import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
 import javax.annotation.Resource;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 @Component
 public class EmailMgrImpl {
@@ -57,5 +62,29 @@ public class EmailMgrImpl {
 
         mailSender.send(mimeMessage);
         logger.info("send an email with attach");
+    }
+
+    public void sendTemplateMail(User user) throws Exception {
+
+        MimeMessage mimeMessage = mailSender.createMimeMessage();
+
+        MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
+        //基本设置.
+        helper.setFrom("mambo1991@163.com");//发送者.
+        helper.setTo("wang.bao@h3c.com");//接收者.
+        helper.setSubject("模板邮件（邮件主题）");//邮件主题.
+
+        Map<String, Object> model = new HashMap<String, Object>();
+        model.put("username", user.getUsername());
+
+        Configuration cfg = new Configuration(Configuration.VERSION_2_3_23);
+        // 设定去哪里读取相应的ftl模板
+        cfg.setClassForTemplateLoading(this.getClass(), "/templates");
+        // 在模板文件目录中寻找名称为name的模板文件
+        Template template   = cfg.getTemplate("email.ftl");
+
+        String html = FreeMarkerTemplateUtils.processTemplateIntoString(template, model);
+        helper.setText(html, true);
+        mailSender.send(mimeMessage);
     }
 }

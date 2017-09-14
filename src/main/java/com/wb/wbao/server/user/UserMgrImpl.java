@@ -54,8 +54,10 @@ public class UserMgrImpl implements UserMgr {
     @Override
     public void sendEmail(User user) {
         try {
-            emailMgr.sendAttachEmail(user);
+            emailMgr.sendTemplateMail(user);
         } catch (MessagingException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
