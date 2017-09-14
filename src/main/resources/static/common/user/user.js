@@ -4,22 +4,21 @@
         .controller('UserController', ['$rootScope', '$scope', '$state', '$resource', 'UserService', '$stateParams',
             function ($rootScope, $scope, $state, $resource, UserService, $stateParams) {
 
-            var isModify = $stateParams.editType == 2;
-
-            activate();
-
-            function activate() {
-                if(isModify){
-                    $scope.header = "修改用户";
-                    $scope.user = UserService.get({id:$stateParams.userId});
-                } else {
-                    $scope.header = "增加用户";
-                }
-            }
-
-                $scope.header="";
-                $scope.users = [];
+                var isModify = $stateParams.editType === 2;
                 $scope.user = {};
+                activate();
+
+                function activate() {
+                    if (isModify) {
+                        $scope.header = "修改用户";
+                        $scope.user = UserService.get({id: $stateParams.userId});
+                    } else {
+                        $scope.header = "增加用户";
+                    }
+                }
+
+                $scope.header = "";
+                $scope.users = [];
                 queryAll();
 
                 function queryAll() {
@@ -32,11 +31,13 @@
 
                 function save() {
 
-                    if(isModify){
+                    if (isModify) {
+                        console.error("是修改");
                         UserService.update({}, $scope.user, function () {
                             $state.go('app.userList');
                         })
-                    }else {
+                    } else {
+                        console.error("是增加");
                         UserService.save({}, $scope.user, function () {
                             $state.go('app.userList');
                         });

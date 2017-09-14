@@ -10,19 +10,9 @@ angular.module('app')
     ]
 ).config(['$stateProvider','$urlRouterProvider', function($stateProvider,$urlRouterProvider) {
     $stateProvider
-        .state('register', {
-            url: '/register',
-            templateUrl: 'login/register.html',
-            controller:'RegisterController'
-        })
-         .state('practice', {
-            url: '/practice',
-            templateUrl: 'views/ownh5css3.html',
-            controller: 'PracticeController'
-        })
         .state('blog', {
             url: '/blog',
-            templateUrl: 'blog/blog.html',
+            templateUrl: 'common/blog/blog.html',
             controller:'BlogController'
         })
         .state('app', {
@@ -31,18 +21,18 @@ angular.module('app')
             controller:'AppCtrl'
         })
         .state('app.welcome', {
-            url: '/app/welcome',
-            templateUrl: '../js/dashboard/welcome.html',
+            url: '/welcome',
+            templateUrl: 'common/app/welcome.html',
             controller:'WelcomeController'
         })
         .state('app.userList', {
             url: '/userList',
-            templateUrl: 'user/user.html',
+            templateUrl: 'common/user/user.html',
             controller:'UserController'
     }) .state('app.user-edit', {
             url: '/addUser/:editType/:userId',
-            templateUrl: 'user/user-edit.html',
+            templateUrl: 'common/user/user-edit.html',
             controller:'UserController'
     });
-    $urlRouterProvider.otherwise('/app/welcome');
+    $urlRouterProvider.otherwise('/app/welcome');//这里是.app和.app.welcome的url的拼接
 }]);
