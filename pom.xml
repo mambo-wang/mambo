@@ -68,18 +68,6 @@
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
 
-        <!--&lt;!&ndash;&lt;!&ndash;模板依赖&ndash;&gt;&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>net.sourceforge.nekohtml</groupId>-->
-            <!--<artifactId>nekohtml</artifactId>-->
-            <!--<version>1.9.22</version>-->
-        <!--</dependency>-->
-
         <!--Spring Data JPA依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

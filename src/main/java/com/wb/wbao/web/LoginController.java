@@ -55,7 +55,7 @@ public class LoginController {
     }
 
 
-    @RequestMapping({"/", "index"})
+    @RequestMapping({"/", "/index"})
     public ModelAndView index(ModelAndView modelAndView) {
         modelAndView.setViewName(HOME_PAGE);
         return modelAndView;

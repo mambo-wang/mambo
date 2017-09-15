@@ -14,3 +14,11 @@ logback-access访问模块与Servlet容器集成提供通过Http来访问日志�
 logback的配置文件都放在/src/main/resource/文件夹下的logback.xml文件中。
 其中logback.xml文件就是logback的配置文件。
 只要将这个文件放置好了之后，系统会自动找到这个配置文件。
+
+2、shiro
+ 集成shiro大概分这么一个步骤：
+
+(a) pom.xml中添加Shiro依赖；
+(b) 注入Shiro Factory和SecurityManager。
+(c) 身份认证
+(d) 权限控制
