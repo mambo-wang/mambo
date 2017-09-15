@@ -103,4 +103,8 @@ public class User {
     public void setRoleList(List<Role> roleList) {
         this.roleList = roleList;
     }
+
+    public byte[] getCredentialsSalt() {
+        return new byte[0];
+    }
 }

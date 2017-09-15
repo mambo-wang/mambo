@@ -3,6 +3,10 @@ package com.wb.wbao.web;
 import com.wb.wbao.dto.CommonDTO;
 import com.wb.wbao.server.user.User;
 import com.wb.wbao.server.user.UserMgr;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -36,13 +40,33 @@ public class LoginController {
     @ResponseBody
     public CommonDTO login(@RequestBody User user) {
         user.setUsername("万事俱备");
+
+        Subject subject = SecurityUtils.getSubject();
+
+        UsernamePasswordToken token = new UsernamePasswordToken();
+        token.setUsername(user.getLoginName());
+        token.setPassword(user.getPassword().toCharArray());
+        token.setRememberMe(false);
+        token.setHost("127.0.0.1");
         CommonDTO result = new CommonDTO();
-        result.setResult(CommonDTO.Result.SUCCESS);
-        result.setData(user);
 
-        userMgr.sendEmail(user);
-
-        return result;
+        if(subject.isAuthenticated()){
+            result.setResult(CommonDTO.Result.SUCCESS);
+            result.setData(user);
+            return result;
+        }
+        try{
+            subject.login(token);
+            result.setResult(CommonDTO.Result.SUCCESS);
+            result.setData(user);
+            userMgr.sendEmail(user);
+            return result;
+        }
+        catch (AuthenticationException e){
+            result.setResult(CommonDTO.Result.FAILURE);
+            result.setData(e.getMessage());
+            return result;
+        }
     }
 
     @GetMapping(value = "/{loginName}/{password}")

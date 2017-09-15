@@ -31,7 +31,7 @@ angular.module('app')
             controller:'UserController',
             controllerAs:'userVm'
     }) .state('app.user-edit', {
-            url: '/addUser/:editType/:userId',
+            url: '/editUser/:editType/:userId',
             templateUrl: 'common/user/user-edit.html',
             controller:'UserController',
             controllerAs:'userVm'

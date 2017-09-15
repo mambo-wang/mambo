@@ -26,6 +26,9 @@ public class Permission implements Serializable {
     @Column(name = "URL")
     private String url;
 
+    /**
+     * 权限字符串,menu例子：role:*，button例子：role:create,role:update,role:delete,role:view
+     */
     @Column(name = "PERMISSION")
     private String permission;
 

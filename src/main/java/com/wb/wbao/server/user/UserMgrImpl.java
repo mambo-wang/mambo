@@ -61,4 +61,11 @@ public class UserMgrImpl implements UserMgr {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public User queryByLoginName(String loginName) {
+
+        logger.info("query by loginName");
+        return userDao.findByLoginName(loginName);
+    }
 }

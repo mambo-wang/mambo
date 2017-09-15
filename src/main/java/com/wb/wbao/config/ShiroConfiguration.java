@@ -80,7 +80,13 @@ public class ShiroConfiguration {
     @Bean
     public SecurityManager securityManager(){
         DefaultWebSecurityManager securityManager =  new DefaultWebSecurityManager();
+        securityManager.setRealm(myShiroRealm());
         return securityManager;
     }
 
+    @Bean
+    public ShiroRealm myShiroRealm() {
+        ShiroRealm shiroRealm = new ShiroRealm();
+        return shiroRealm;
+    }
 }

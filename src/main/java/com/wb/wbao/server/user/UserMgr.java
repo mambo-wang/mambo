@@ -18,4 +18,6 @@ public interface UserMgr {
 
     void sendEmail(User user);
 
+    User queryByLoginName(String loginName);
+
 }
