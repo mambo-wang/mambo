@@ -124,6 +124,12 @@
             <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/mysql-connector-java-5.1.40-bin.jar</systemPath>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>0.2.23</version>
+        </dependency>
+
         <!--io-->
         <dependency>
             <groupId>commons-io</groupId>
