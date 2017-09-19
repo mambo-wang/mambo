@@ -26,6 +26,7 @@
                     console.error("获取用户列表");
                     userVm.users = UserService.query({}, function (data) {
                     });
+                    console.info(userVm.users);
                 }
 
                 userVm.save = save;

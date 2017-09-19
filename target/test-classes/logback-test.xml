@@ -12,10 +12,9 @@
     <!-- ch.qos.logback.core.rolling.RollingFileAppender 文件日志输出 -->
     <appender name="file"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <Encoding>UTF-8</Encoding>
         <File>C:/mylog/test.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>C:/mylog/mambo-%d{yyyy-MM-dd}.log
+            <FileNamePattern>C:/mylog/mambo-%d{yyyy-MM-dd}_%i.log
             </FileNamePattern>
             <MaxHistory>10</MaxHistory>
             <TimeBasedFileNamingAndTriggeringPolicy

@@ -1,5 +1,6 @@
 package com.wb.wbao.server.user;
 
+import com.wb.wbao.dto.UserDTO;
 import com.wb.wbao.server.email.EmailMgrImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import javax.mail.MessagingException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service("userMgr")
 public class UserMgrImpl implements UserMgr {
@@ -21,9 +23,12 @@ public class UserMgrImpl implements UserMgr {
     private Logger logger = LoggerFactory.getLogger(UserMgrImpl.class);
 
     @Override
-    public List<User> queryAll() {
+    public List<UserDTO> queryAll() {
         logger.debug("query all user");
-        return userDao.findAll();
+        return userDao.findAll()
+                .stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -67,5 +72,19 @@ public class UserMgrImpl implements UserMgr {
 
         logger.info("query by loginName");
         return userDao.findByLoginName(loginName);
+    }
+
+    @Override
+    public UserDTO convertToDTO(User user) {
+
+        UserDTO userDTO = new UserDTO();
+
+        userDTO.setId(user.getId());
+        userDTO.setLoginName(user.getLoginName());
+        userDTO.setPassword(user.getPassword());
+        userDTO.setUsername(user.getUsername());
+        userDTO.setComeYear(user.getComeYear());
+
+        return userDTO;
     }
 }

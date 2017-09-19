@@ -1,10 +1,12 @@
 package com.wb.wbao.server.user;
 
+import com.wb.wbao.dto.UserDTO;
+
 import java.util.List;
 
 public interface UserMgr {
 
-    List<User> queryAll();
+    List<UserDTO> queryAll();
 
     User queryUserById(Long userId);
 
@@ -19,5 +21,7 @@ public interface UserMgr {
     void sendEmail(User user);
 
     User queryByLoginName(String loginName);
+
+    UserDTO convertToDTO(User user);
 
 }

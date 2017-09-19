@@ -22,7 +22,7 @@ import java.util.Map;
 @Component
 public class EmailMgrImpl {
 
-    @Resource
+//    @Resource
     private JavaMailSender mailSender;
 
     Logger logger = LoggerFactory.getLogger(EmailMgrImpl.class);

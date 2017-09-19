@@ -22,7 +22,7 @@ import java.util.Map;
  * @author Angel(QQ:412887952)
  * @version v.0.1
  */
-@Configuration
+//@Configuration
 public class ShiroConfiguration {
 
     Logger logger = LoggerFactory.getLogger(ShiroConfiguration.class);
@@ -42,7 +42,7 @@ public class ShiroConfiguration {
      user:配置记住我或认证通过可以访问；
      *
      */
-    @Bean(name = "shiroFilter")
+//    @Bean(name = "shiroFilter")
     public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager){
         logger.info("ShiroConfiguration.shiroFilter()");
         ShiroFilterFactoryBean shiroFilterFactoryBean  = new ShiroFilterFactoryBean();

@@ -20,6 +20,6 @@ public class UserMgrTest {
     @Test
     public void getUser() {
         User user = userMgr.queryUserById(1L);
-        Assert.assertEquals(user.getLoginName(), "wbao");
+        Assert.assertEquals(user.getLoginName(), "admin");
     }
 }
