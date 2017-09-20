@@ -20,7 +20,7 @@ public class Permission implements Serializable {
     @Column(name = "NAME")
     private String name;
 
-    @Column(name = "RESOURCE_TYPE")
+    @Column(name = "RESOURCE_TYPE", columnDefinition="enum('menu','button')")
     private String resourceType;
 
     @Column(name = "URL")

@@ -39,34 +39,30 @@ public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
     public CommonDTO login(@RequestBody User user) {
-        user.setUsername("万事俱备");
 
-//        Subject subject = SecurityUtils.getSubject();
+        Subject subject = SecurityUtils.getSubject();
 
-//        UsernamePasswordToken token = new UsernamePasswordToken();
-//        token.setUsername(user.getLoginName());
-//        token.setPassword(user.getPassword().toCharArray());
-//        token.setRememberMe(false);
-//        token.setHost("127.0.0.1");
+        UsernamePasswordToken token = new UsernamePasswordToken(user.getLoginName(), user.getPassword());
+
         CommonDTO result = new CommonDTO();
 
-//        if(subject.isAuthenticated()){
+        if(subject.isAuthenticated()){
             result.setResult(CommonDTO.Result.SUCCESS);
-            result.setData(user);
+            result.setData(userMgr.convertToDTO(userMgr.queryByLoginName(user.getLoginName())));
             return result;
-//        }
-//        try{
-//            subject.login(token);
-//            result.setResult(CommonDTO.Result.SUCCESS);
-//            result.setData(user);
+        }
+        try{
+            subject.login(token);
+            result.setResult(CommonDTO.Result.SUCCESS);
+            result.setData(userMgr.convertToDTO(userMgr.queryByLoginName(user.getLoginName())));
 //            userMgr.sendEmail(user);
-//            return result;
-//        }
-//        catch (AuthenticationException e){
-//            result.setResult(CommonDTO.Result.FAILURE);
-//            result.setData(e.getMessage());
-//            return result;
-//        }
+            return result;
+        }
+        catch (AuthenticationException e){
+            result.setResult(CommonDTO.Result.FAILURE);
+            result.setData(e.getMessage());
+            return result;
+        }
     }
 
     @GetMapping(value = "/{loginName}/{password}")
@@ -89,6 +85,8 @@ public class LoginController {
     @RequestMapping(value = "/logout")
     public ModelAndView logout(ModelAndView modelAndView) {
         modelAndView.setViewName(SIGN_IN_PAGE);
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
         return modelAndView;
     }
 

@@ -15,12 +15,14 @@
                     var sendUser = self.user;
                     LoginService.login(sendUser, function (response) {
 
+                        console.info(response);
                         if('SUCCESS' === response.result){
                             sessionStorage.loginUser = JSON.stringify(response.data);
                             location.href = "home.html";
                             console.error(sessionStorage.loginUser);
                         }else {
                             self.errorMessage = response.data;
+                            console.error(self.errorMessage);
                         }
                     })
                 }
