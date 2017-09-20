@@ -1,9 +1,9 @@
 package com.wb.wbao.shirotest.chapter3;
 
-import junit.framework.Assert;
 import org.apache.shiro.authz.ModularRealmAuthorizer;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.apache.shiro.authz.permission.WildcardPermission;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -15,7 +15,7 @@ public class AuthorizerTest extends BaseTest {
 
     @Test
     public void testIsPermitted() {
-        login("classpath:shiro-authorizer.ini", "zhang", "123");
+        login("classpath:chapter3/shiro-authorizer.ini", "zhang", "123");
         //判断拥有权限：user:create
         Assert.assertTrue(subject().isPermitted("user1:update"));
         Assert.assertTrue(subject().isPermitted("user2:update"));
@@ -31,7 +31,7 @@ public class AuthorizerTest extends BaseTest {
 
     @Test
     public void testIsPermitted2() {
-        login("classpath:shiro-jdbc-authorizer.ini", "zhang", "123");
+        login("classpath:chapter3/shiro-jdbc-authorizer.ini", "zhang", "123");
         //判断拥有权限：user:create
         Assert.assertTrue(subject().isPermitted("user1:update"));
         Assert.assertTrue(subject().isPermitted("user2:update"));
