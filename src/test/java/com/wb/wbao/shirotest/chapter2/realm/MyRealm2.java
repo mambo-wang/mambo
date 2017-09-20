@@ -1,4 +1,4 @@
-package com.wb.wbao.shirotest.realm;
+package com.wb.wbao.shirotest.chapter2.realm;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.Realm;
@@ -8,11 +8,11 @@ import org.apache.shiro.realm.Realm;
  * <p>Date: 14-1-25
  * <p>Version: 1.0
  */
-public class MyRealm4 implements Realm {
+public class MyRealm2 implements Realm {
 
     @Override
     public String getName() {
-        return "myrealm4";
+        return "myrealm2";
     }
 
     @Override
@@ -25,7 +25,7 @@ public class MyRealm4 implements Realm {
 
         String username = (String)token.getPrincipal();  //得到用户名
         String password = new String((char[])token.getCredentials()); //得到密码
-        if(!"zhang".equals(username)) {
+        if(!"wang".equals(username)) {
             throw new UnknownAccountException(); //如果用户名错误
         }
         if(!"123".equals(password)) {

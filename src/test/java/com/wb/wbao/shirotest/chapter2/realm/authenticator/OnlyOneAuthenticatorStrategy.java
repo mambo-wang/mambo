@@ -1,13 +1,11 @@
-package com.wb.wbao.shirotest.authenticator.strategy;
+package com.wb.wbao.shirotest.chapter2.realm.authenticator;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authc.pam.AbstractAuthenticationStrategy;
-import org.apache.shiro.authc.pam.AuthenticationStrategy;
 import org.apache.shiro.realm.Realm;
-import org.apache.shiro.util.CollectionUtils;
 
 import java.util.Collection;
 
@@ -16,7 +14,7 @@ import java.util.Collection;
  * <p>Date: 14-1-25
  * <p>Version: 1.0
  */
-public class AtLeastTwoAuthenticatorStrategy extends AbstractAuthenticationStrategy {
+public class OnlyOneAuthenticatorStrategy extends AbstractAuthenticationStrategy {
 
     @Override
     public AuthenticationInfo beforeAllAttempts(Collection<? extends Realm> realms, AuthenticationToken token) throws AuthenticationException {
@@ -38,20 +36,21 @@ public class AtLeastTwoAuthenticatorStrategy extends AbstractAuthenticationStrat
                 info = singleRealmInfo;
             } else {
                 info = merge(singleRealmInfo, aggregateInfo);
+                if(info.getPrincipals().getRealmNames().size() > 1) {
+                    System.out.println(info.getPrincipals().getRealmNames());
+                    throw new AuthenticationException("Authentication token of type [" + token.getClass() + "] " +
+                            "could not be authenticated by any configured realms.  Please ensure that only one realm can " +
+                            "authenticate these tokens.");
+                }
             }
         }
+
 
         return info;
     }
 
     @Override
     public AuthenticationInfo afterAllAttempts(AuthenticationToken token, AuthenticationInfo aggregate) throws AuthenticationException {
-        if (aggregate == null || CollectionUtils.isEmpty(aggregate.getPrincipals()) || aggregate.getPrincipals().getRealmNames().size() < 2) {
-            throw new AuthenticationException("Authentication token of type [" + token.getClass() + "] " +
-                    "could not be authenticated by any configured realms.  Please ensure that at least two realm can " +
-                    "authenticate these tokens.");
-        }
-
         return aggregate;
     }
 }

@@ -2,23 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ceabb6c0-6880-4a8c-9897-84b5c88a918f" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/shiro-authenticator-all-fail.ini" afterPath="$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-all-fail.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/shiro-authenticator-all-success.ini" afterPath="$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-all-success.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/shiro-authenticator-atLeastOne-success.ini" afterPath="$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-atLeastOne-success.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/shiro-authenticator-atLeastTwo-success.ini" afterPath="$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-atLeastTwo-success.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/shiro-authenticator-first-success.ini" afterPath="$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-first-success.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/shiro-authenticator-onlyone-success.ini" afterPath="$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-onlyone-success.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/shiro-jdbc-realm.ini" afterPath="$PROJECT_DIR$/src/test/resources/chapter2/shiro-jdbc-realm.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/shiro-multi-realm.ini" afterPath="$PROJECT_DIR$/src/test/resources/chapter2/shiro-multi-realm.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/shiro-realm.ini" afterPath="$PROJECT_DIR$/src/test/resources/chapter2/shiro-realm.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/shiro.ini" afterPath="$PROJECT_DIR$/src/test/resources/chapter2/shiro.ini" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/shiro.sql" afterPath="$PROJECT_DIR$/src/test/resources/chapter2/shiro.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wb/wbao/Swagger2.class" afterPath="$PROJECT_DIR$/target/classes/com/wb/wbao/Swagger2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wb/wbao/server/user/UserMgrImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/wb/wbao/server/user/UserMgrImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/AuthorizerTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/BaseTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/PermissionTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/RoleTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/permission/BitAndWildPermissionResolver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/permission/BitPermission.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/permission/MyRolePermissionResolver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/realm/MyRealm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/chapter3/shiro-init-data.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/chapter3/shiro-role.ini" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/AuthenticatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/AuthenticatorTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/LoginLogoutTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/LoginLogoutTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/authenticator/strategy/AtLeastTwoAuthenticatorStrategy.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/authenticator/AtLeastTwoAuthenticatorStrategy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/authenticator/strategy/OnlyOneAuthenticatorStrategy.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/authenticator/OnlyOneAuthenticatorStrategy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/realm/MyRealm1.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/MyRealm1.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/realm/MyRealm2.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/MyRealm2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/realm/MyRealm3.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/MyRealm3.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/realm/MyRealm4.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/MyRealm4.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/girl.iml" afterPath="$PROJECT_DIR$/girl.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/AuthenticatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/AuthenticatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/LoginLogoutTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/LoginLogoutTest.java" />
     </list>
     <ignored path="girl.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,8 +52,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shiro-authenticator-first-success.ini" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-first-success.ini">
+      <file leaf-file-name="shiro-authenticator-atLeastTwo-success.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-atLeastTwo-success.ini">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="45" />
@@ -60,51 +62,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shiro-authenticator-onlyone-success.ini" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-onlyone-success.ini">
+      <file leaf-file-name="BitAndWildPermissionResolver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/permission/BitAndWildPermissionResolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            <state relative-caret-position="178">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shiro.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro.sql">
+      <file leaf-file-name="BitPermission.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/permission/BitPermission.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyRolePermissionResolver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/permission/MyRolePermissionResolver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AtLeastTwoAuthenticatorStrategy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/authenticator/strategy/AtLeastTwoAuthenticatorStrategy.java">
+      <file leaf-file-name="MyRealm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/realm/MyRealm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OnlyOneAuthenticatorStrategy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/authenticator/strategy/OnlyOneAuthenticatorStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthenticatorTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/AuthenticatorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-561">
-              <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+            <state relative-caret-position="-75">
+              <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginLogoutTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/LoginLogoutTest.java">
+      <file leaf-file-name="RoleTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/RoleTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-336">
-              <caret line="121" column="66" lean-forward="false" selection-start-line="121" selection-start-column="66" selection-end-line="121" selection-end-column="66" />
+            <state relative-caret-position="417">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,21 +116,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyRealm2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/realm/MyRealm2.java">
+      <file leaf-file-name="shiro-init-data.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/chapter3/shiro-init-data.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="9" column="80" lean-forward="true" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shiro-authenticator-all-fail.ini" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-all-fail.ini">
+      <file leaf-file-name="shiro-role.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/chapter3/shiro-role.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="100">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/BaseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -189,13 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/static/common/app/aside.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/common/app/app.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/common/user/user.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/common/user/user-edit.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/common/app/main.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/common/blog/blog.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/common/app/welcome.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/common/app/app.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/common/app/controllers.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/common/dashboard/welcome.html" />
@@ -240,6 +235,13 @@
         <option value="$PROJECT_DIR$/src/test/resources/shiro-authenticator-onlyone-success.ini" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/LoginLogoutTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/AuthenticatorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/RoleTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/authenticator/strategy/LoginLogoutTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/strategy/LoginLogoutTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/LoginLogoutTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/authenticator/OnlyOneAuthenticatorStrategy.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/realm/MyRealm.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/RoleTest.java" />
       </list>
     </option>
   </component>
@@ -270,9 +272,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="y" value="40" />
+    <option name="width" value="1582" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -380,7 +382,50 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wbao" type="462c0819:PsiDirectoryNode" />
               <item name="shirotest" type="462c0819:PsiDirectoryNode" />
-              <item name="strategy" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="girl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="girl_mambo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wbao" type="462c0819:PsiDirectoryNode" />
+              <item name="shirotest" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter2" type="462c0819:PsiDirectoryNode" />
+              <item name="realm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="girl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="girl_mambo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wbao" type="462c0819:PsiDirectoryNode" />
+              <item name="shirotest" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="girl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="girl_mambo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wbao" type="462c0819:PsiDirectoryNode" />
+              <item name="shirotest" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter3" type="462c0819:PsiDirectoryNode" />
+              <item name="permission" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="girl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="girl_mambo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wbao" type="462c0819:PsiDirectoryNode" />
+              <item name="shirotest" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter3" type="462c0819:PsiDirectoryNode" />
+              <item name="realm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="girl" type="b2602c69:ProjectViewProjectNode" />
@@ -396,6 +441,14 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="chapter2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="girl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="girl_mambo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -416,7 +469,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../shiro-example-master" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -432,11 +485,11 @@
       <recent name="com.wb.wbao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\girl\girl_mambo\src\test\java\com\wb\wbao\shirotest" />
+      <recent name="C:\workspace\girl\girl_mambo\src\test\resources\chapter3" />
       <recent name="D:\github\girl-mambo\girl_mambo\src\test\resources" />
       <recent name="D:\github\girl-mambo\girl_mambo\src\test\java\com\wb\wbao\shirotest" />
       <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources" />
-      <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common" />
-      <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\workspace\girl\girl_mambo\src\test\resources\chapter2" />
@@ -458,75 +511,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LoginLogoutTest.testHelloworld">
+  <component name="RunManager" selected="JUnit.RoleTest.testHasRole">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wb.wbao.Application" />
       <module name="girl" />
       <envs />
     </configuration>
-    <configuration name="AuthenticatorTest.testAllSuccessfulStrategyWithFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.wb.wbao.shirotest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="girl" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.wb.wbao.shirotest" />
-      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.shirotest.AuthenticatorTest" />
-      <option name="METHOD_NAME" value="testAllSuccessfulStrategyWithFail" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="AuthenticatorTest.testAllSuccessfulStrategyWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.wb.wbao.shirotest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="girl" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.wb.wbao.shirotest" />
-      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.shirotest.AuthenticatorTest" />
-      <option name="METHOD_NAME" value="testAllSuccessfulStrategyWithSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="AuthenticatorTest.testAtLeastOneSuccessfulStrategyWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.wb.wbao.shirotest.*" />
+          <option name="PATTERN" value="com.wb.wbao.shirotest.chapter2.strategy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="girl" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.wb.wbao.shirotest" />
-      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.shirotest.AuthenticatorTest" />
+      <option name="PACKAGE_NAME" value="com.wb.wbao.shirotest.authenticator.strategy" />
+      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.shirotest.authenticator.strategy.AuthenticatorTest" />
       <option name="METHOD_NAME" value="testAtLeastOneSuccessfulStrategyWithSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -543,15 +546,15 @@
     <configuration name="AuthenticatorTest.testFirstOneSuccessfulStrategyWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.wb.wbao.shirotest.*" />
+          <option name="PATTERN" value="com.wb.wbao.shirotest.chapter2.strategy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="girl" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.wb.wbao.shirotest" />
-      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.shirotest.AuthenticatorTest" />
+      <option name="PACKAGE_NAME" value="com.wb.wbao.shirotest.authenticator.strategy" />
+      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.shirotest.authenticator.strategy.AuthenticatorTest" />
       <option name="METHOD_NAME" value="testFirstOneSuccessfulStrategyWithSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -568,16 +571,66 @@
     <configuration name="LoginLogoutTest.testHelloworld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.wb.wbao.shirotest.*" />
+          <option name="PATTERN" value="com.wb.wbao.shirotest.chapter2.strategy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="girl" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.wb.wbao.shirotest" />
-      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.shirotest.LoginLogoutTest" />
+      <option name="PACKAGE_NAME" value="com.wb.wbao.shirotest.authenticator.strategy" />
+      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.shirotest.authenticator.strategy.LoginLogoutTest" />
       <option name="METHOD_NAME" value="testHelloworld" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="RoleTest.testCheckRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.wb.wbao.shirotest.chapter3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="girl" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.wb.wbao.shirotest.chapter3" />
+      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.shirotest.chapter3.RoleTest" />
+      <option name="METHOD_NAME" value="testCheckRole" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="RoleTest.testHasRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.wb.wbao.shirotest.chapter3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="girl" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.wb.wbao.shirotest.chapter3" />
+      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.shirotest.chapter3.RoleTest" />
+      <option name="METHOD_NAME" value="testHasRole" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -993,19 +1046,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testAllSuccessfulStrategyWithSuccess" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testAllSuccessfulStrategyWithFail" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testAtLeastOneSuccessfulStrategyWithSuccess" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testFirstOneSuccessfulStrategyWithSuccess" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.LoginLogoutTest.testHelloworld" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testAtLeastOneSuccessfulStrategyWithSuccess" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testFirstOneSuccessfulStrategyWithSuccess" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LoginLogoutTest.testHelloworld" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RoleTest.testHasRole" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.RoleTest.testCheckRole" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LoginLogoutTest.testHelloworld" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testFirstOneSuccessfulStrategyWithSuccess" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testAtLeastOneSuccessfulStrategyWithSuccess" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testAllSuccessfulStrategyWithFail" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testAllSuccessfulStrategyWithSuccess" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RoleTest.testHasRole" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RoleTest.testCheckRole" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LoginLogoutTest.testHelloworld" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testFirstOneSuccessfulStrategyWithSuccess" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest.testAtLeastOneSuccessfulStrategyWithSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -1042,7 +1095,7 @@
       <workItem from="1505821695518" duration="614000" />
       <workItem from="1505830983520" duration="24000" />
       <workItem from="1505831065958" duration="4423000" />
-      <workItem from="1505869238837" duration="1073000" />
+      <workItem from="1505869238837" duration="2992000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1499593949918</created>
@@ -1261,22 +1314,17 @@
       <option name="project" value="LOCAL" />
       <updated>1505835503909</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="时间：9月20日&#10;改动：1、shiro开发，开涛博客，第二章，账号认证。">
+      <created>1505870401932</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1505870401932</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AuthenticatorTest_testAllSuccessfulStrategyWithSuccess - 2017.09.19 at 23h 31m 32s.xml">
-      <configuration name="AuthenticatorTest.testAllSuccessfulStrategyWithSuccess" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthenticatorTest_testAtLeastOneSuccessfulStrategyWithSuccess - 2017.09.19 at 23h 35m 14s.xml">
-      <configuration name="AuthenticatorTest.testAtLeastOneSuccessfulStrategyWithSuccess" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthenticatorTest_testFirstOneSuccessfulStrategyWithSuccess - 2017.09.19 at 23h 36m 42s.xml">
-      <configuration name="AuthenticatorTest.testFirstOneSuccessfulStrategyWithSuccess" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LoginLogoutTest_testCustomMultiRealm - 2017.09.19 at 23h 10m 11s.xml">
-      <configuration name="LoginLogoutTest.testCustomMultiRealm" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LoginLogoutTest_testCustomRealm - 2017.09.19 at 23h 06m 32s.xml">
       <configuration name="LoginLogoutTest.testCustomRealm" configurationId="JUnit" />
     </history-entry>
@@ -1292,12 +1340,24 @@
     <history-entry file="LoginLogoutTest_testJDBCRealm - 2017.09.19 at 23h 15m 45s.xml">
       <configuration name="LoginLogoutTest.testJDBCRealm" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RoleTest_testCheckRole - 2017.09.20 at 09h 50m 47s.xml">
+      <configuration name="RoleTest.testCheckRole" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoleTest_testCheckRole - 2017.09.20 at 09h 51m 29s.xml">
+      <configuration name="RoleTest.testCheckRole" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoleTest_testHasRole - 2017.09.20 at 09h 39m 45s.xml">
+      <configuration name="RoleTest.testHasRole" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoleTest_testHasRole - 2017.09.20 at 09h 52m 48s.xml">
+      <configuration name="RoleTest.testHasRole" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="UserMgrTest_getUser - 2017.09.19 at 19h 41m 27s.xml">
       <configuration name="UserMgrTest.getUser" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168759000" />
+    <option name="totallyTimeSpent" value="170678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1616" height="876" extended-state="6" />
@@ -1312,7 +1372,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13648649" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35540542" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32702702" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1409,18 +1469,11 @@
     <MESSAGE value="时间：9月15日&#10;改动：1、shiro开发，权限认证。" />
     <MESSAGE value="时间：9月19日&#10;改动：1、shiro开发，开涛博客，第一章。" />
     <MESSAGE value="时间：9月19日&#10;改动：1、shiro开发，开涛博客，第二章，账号认证。" />
-    <option name="LAST_COMMIT_MESSAGE" value="时间：9月19日&#10;改动：1、shiro开发，开涛博客，第二章，账号认证。" />
+    <MESSAGE value="时间：9月20日&#10;改动：1、shiro开发，开涛博客，第二章，账号认证。" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间：9月20日&#10;改动：1、shiro开发，开涛博客，第二章，账号认证。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/AuthenticatorTest.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
@@ -1430,63 +1483,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/server/user/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="41" lean-forward="false" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/common/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/common/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="51" lean-forward="true" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/dto/CommonDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/freemarker/freemarker/2.3.25-incubating/freemarker-2.3.25-incubating.jar!/freemarker/template/Configuration.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/server/permission/Permission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="46" column="29" lean-forward="true" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/server/role/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/common/login/login.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/signin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1632,14 +1628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/realm/MyRealm4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-287">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-realm.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -1671,38 +1659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/realm/MyRealm1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/realm/MyRealm3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-atLeastTwo-success.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-all-success.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/subject/PrincipalCollection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-89">
@@ -1718,42 +1674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/realm/MyRealm2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/authenticator/strategy/OnlyOneAuthenticatorStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-atLeastOne-success.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-first-success.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/authenticator/strategy/AtLeastTwoAuthenticatorStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -1774,20 +1698,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/LoginLogoutTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/RoleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-336">
-          <caret line="121" column="66" lean-forward="false" selection-start-line="121" selection-start-column="66" selection-end-line="121" selection-end-column="66" />
+        <state relative-caret-position="225">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/authenticator/AtLeastTwoAuthenticatorStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/authenticator/OnlyOneAuthenticatorStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/MyRealm1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-214">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/MyRealm2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/MyRealm3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/realm/MyRealm4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/AuthenticatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-430">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter2/LoginLogoutTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-730">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-all-success.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-atLeastOne-success.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/chapter2/shiro-authenticator-atLeastTwo-success.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/permission/BitAndWildPermissionResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/permission/BitPermission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/permission/MyRolePermissionResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/realm/MyRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/AuthenticatorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/chapter3/shiro-init-data.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+        <state relative-caret-position="225">
+          <caret line="9" column="80" lean-forward="true" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/chapter3/shiro-role.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/shirotest/chapter3/RoleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

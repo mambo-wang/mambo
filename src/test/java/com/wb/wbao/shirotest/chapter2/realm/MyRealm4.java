@@ -1,20 +1,18 @@
-package com.wb.wbao.shirotest.realm;
+package com.wb.wbao.shirotest.chapter2.realm;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.Realm;
-
-import java.util.List;
 
 /**
  * <p>User: Zhang Kaitao
  * <p>Date: 14-1-25
  * <p>Version: 1.0
  */
-public class MyRealm1 implements Realm {
+public class MyRealm4 implements Realm {
 
     @Override
     public String getName() {
-        return "myrealm1";
+        return "myrealm4";
     }
 
     @Override
