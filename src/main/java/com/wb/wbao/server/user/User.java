@@ -12,6 +12,12 @@ import java.util.List;
 @Table(name = "tbl_user")
 public class User {
 
+    public static final Integer ROLE_TYPE_ADMIN = 1;
+    public static final Integer ROLE_TYPE_COMMON = 0;
+
+    public static final Integer STATE_NORMAL = 1;
+    public static final Integer STATE_LOCKED = 0;
+
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -104,7 +110,7 @@ public class User {
         this.roleList = roleList;
     }
 
-    public byte[] getCredentialsSalt() {
-        return new byte[0];
+    public String getCredentialsSalt() {
+        return username + salt;
     }
 }

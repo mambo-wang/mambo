@@ -33,8 +33,8 @@ public class UserController {
     @ApiOperation(value = "创建用户",notes = "根据用户名、密码、入学年份、用户姓名创建用户")
     @ApiImplicitParam(name = "user", value = "用户", required = true, dataType = "User")
     @PostMapping
-    public List<UserDTO> createUser(@RequestBody User user){
-        userMgr.createUser(user);
+    public List<UserDTO> createUser(@RequestBody UserDTO userDTO){
+        userMgr.createUser(userDTO);
         logger.info("create a user");
         return userMgr.queryAll();
     }
@@ -48,8 +48,8 @@ public class UserController {
     @ApiOperation(value = "修改",notes = "根据用户名、密码、入学年份、用户姓名修改用户")
     @ApiImplicitParam(name = "user", value = "用户", required = true, dataType = "User")
     @PutMapping
-    public List<UserDTO> modifyUser(@RequestBody User user){
-        userMgr.modifyUser(user);
+    public List<UserDTO> modifyUser(@RequestBody UserDTO userDTO){
+        userMgr.modifyUser(userDTO);
         return userMgr.queryAll();
     }
 

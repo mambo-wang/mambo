@@ -41,11 +41,6 @@ public class Permission implements Serializable {
     @Column(name = "AVAILABLE")
     private Integer available = Constant.AVAILABLE_FALSE;
 
-    @ManyToMany
-    @JoinTable(name = "tbl_role_permission", joinColumns = {@JoinColumn(name = "PERMISSION_ID")},
-    inverseJoinColumns = {@JoinColumn(name = "ROLE_ID")})
-    private List<Role> roles;
-
     public Long getId() {
         return id;
     }
@@ -109,13 +104,5 @@ public class Permission implements Serializable {
 
     public void setAvailable(Integer available) {
         this.available = available;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
     }
 }

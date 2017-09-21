@@ -32,11 +32,6 @@ public class Role implements Serializable {
     inverseJoinColumns = {@JoinColumn(name = "PERMISSION_ID")})
     private List<Permission> permissions;
 
-    @ManyToMany
-    @JoinTable(name = "tbl_user_role", joinColumns = {@JoinColumn(name = "ROLE_ID")},
-    inverseJoinColumns = {@JoinColumn(name = "USER_ID")})
-    private List<User> users;
-
     public Long getId() {
         return id;
     }
@@ -75,13 +70,5 @@ public class Role implements Serializable {
 
     public void setPermissions(List<Permission> permissions) {
         this.permissions = permissions;
-    }
-
-    public List<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(List<User> users) {
-        this.users = users;
     }
 }

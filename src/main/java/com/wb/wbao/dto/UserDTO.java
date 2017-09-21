@@ -15,6 +15,8 @@ public class UserDTO {
 
     private String roleStr;
 
+    private Integer roleType;
+
     public Long getId() {
         return id;
     }
@@ -61,5 +63,13 @@ public class UserDTO {
 
     public void setRoleStr(String roleStr) {
         this.roleStr = roleStr;
+    }
+
+    public Integer getRoleType() {
+        return roleType;
+    }
+
+    public void setRoleType(Integer roleType) {
+        this.roleType = roleType;
     }
 }

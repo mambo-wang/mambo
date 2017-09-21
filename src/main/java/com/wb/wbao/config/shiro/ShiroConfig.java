@@ -1,6 +1,7 @@
 package com.wb.wbao.config.shiro;
 
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
@@ -46,18 +47,18 @@ public class ShiroConfig {
 	 * ）
 	 * @return
 	 */
-//	@Bean
-//	public HashedCredentialsMatcher hashedCredentialsMatcher(){
-//		HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();
-//		hashedCredentialsMatcher.setHashAlgorithmName("md5");//散列算法:这里使用MD5算法;
-//		hashedCredentialsMatcher.setHashIterations(2);//散列的次数，比如散列两次，相当于 md5(md5(""));
-//		return hashedCredentialsMatcher;
-//	}
+	@Bean
+	public HashedCredentialsMatcher hashedCredentialsMatcher(){
+		HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();
+		hashedCredentialsMatcher.setHashAlgorithmName("md5");//散列算法:这里使用MD5算法;
+		hashedCredentialsMatcher.setHashIterations(2);//散列的次数，比如散列两次，相当于 md5(md5(""));
+		return hashedCredentialsMatcher;
+	}
 
 	@Bean
 	public MyShiroRealm myShiroRealm(){
 		MyShiroRealm myShiroRealm = new MyShiroRealm();
-//		myShiroRealm.setCredentialsMatcher(hashedCredentialsMatcher());
+		myShiroRealm.setCredentialsMatcher(hashedCredentialsMatcher());
 		return myShiroRealm;
 	}
 
