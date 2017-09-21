@@ -33,4 +33,5 @@ public interface UserMgr {
 
     void changePassword(Long userId, String newPassword);
 
+    UserDTO queryLoginUser();
 }

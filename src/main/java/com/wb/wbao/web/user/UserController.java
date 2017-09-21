@@ -30,6 +30,11 @@ public class UserController {
         return userMgr.queryUserById(id);
     }
 
+    @GetMapping(value = "/loginUser")
+    public UserDTO queryLoginUser(){
+        return userMgr.queryLoginUser();
+    }
+
     @ApiOperation(value = "创建用户",notes = "根据用户名、密码、入学年份、用户姓名创建用户")
     @ApiImplicitParam(name = "user", value = "用户", required = true, dataType = "User")
     @PostMapping

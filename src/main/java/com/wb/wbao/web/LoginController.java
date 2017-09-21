@@ -1,6 +1,7 @@
 package com.wb.wbao.web;
 
 import com.wb.wbao.dto.CommonDTO;
+import com.wb.wbao.dto.UserDTO;
 import com.wb.wbao.server.user.User;
 import com.wb.wbao.server.user.UserMgr;
 import org.apache.shiro.SecurityUtils;
@@ -54,7 +55,9 @@ public class LoginController {
         try{
             subject.login(token);
             result.setResult(CommonDTO.Result.SUCCESS);
-            result.setData(userMgr.convertToDTO(userMgr.queryByLoginName(user.getLoginName())));
+            UserDTO userDTO = userMgr.convertToDTO(userMgr.queryByLoginName(user.getLoginName()));
+            result.setData(userDTO);
+            subject.getSession().setAttribute("loginUser", userDTO);
 //            userMgr.sendEmail(user);
             return result;
         }

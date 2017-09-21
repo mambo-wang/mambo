@@ -5,6 +5,8 @@ import com.wb.wbao.dto.UserDTO;
 import com.wb.wbao.server.email.EmailMgrImpl;
 import com.wb.wbao.server.permission.Permission;
 import com.wb.wbao.server.role.Role;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -160,5 +162,12 @@ public class UserMgrImpl implements UserMgr {
         user.setPassword(newPassword);
         passwordHelper.encryptPassword(user);
         userDao.save(user);
+    }
+
+    @Override
+    public UserDTO queryLoginUser() {
+        Subject subject = SecurityUtils.getSubject();
+
+        return (UserDTO) subject.getSession().getAttribute("loginUser");
     }
 }
