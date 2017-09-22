@@ -1,6 +1,5 @@
 package com.wb.wbao.config.shiro;
 
-import com.wb.wbao.server.role.Role;
 import com.wb.wbao.server.user.User;
 import com.wb.wbao.server.user.UserMgr;
 import org.apache.shiro.authc.*;

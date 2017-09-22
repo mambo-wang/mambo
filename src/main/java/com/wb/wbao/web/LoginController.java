@@ -2,6 +2,7 @@ package com.wb.wbao.web;
 
 import com.wb.wbao.dto.CommonDTO;
 import com.wb.wbao.dto.UserDTO;
+import com.wb.wbao.server.session.SessionMgr;
 import com.wb.wbao.server.user.User;
 import com.wb.wbao.server.user.UserMgr;
 import org.apache.shiro.SecurityUtils;
@@ -23,6 +24,9 @@ public class LoginController {
 
     @Resource
     private UserMgr userMgr;
+
+    @Resource
+    private SessionMgr sessionMgr;
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public ModelAndView login(ModelAndView mv) {
@@ -57,7 +61,7 @@ public class LoginController {
             result.setResult(CommonDTO.Result.SUCCESS);
             UserDTO userDTO = userMgr.convertToDTO(userMgr.queryByLoginName(user.getLoginName()));
             result.setData(userDTO);
-            subject.getSession().setAttribute("loginUser", userDTO);
+            sessionMgr.setAttribute("loginUser", userDTO);
 //            userMgr.sendEmail(user);
             return result;
         }

@@ -5,6 +5,7 @@ import com.wb.wbao.dto.UserDTO;
 import com.wb.wbao.server.email.EmailMgrImpl;
 import com.wb.wbao.server.permission.Permission;
 import com.wb.wbao.server.role.Role;
+import com.wb.wbao.server.session.SessionMgr;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
@@ -24,6 +25,9 @@ public class UserMgrImpl implements UserMgr {
 
     @Resource
     private EmailMgrImpl emailMgr;
+
+    @Resource
+    private SessionMgr sessionMgr;
 
     private PasswordHelper passwordHelper = new PasswordHelper();
 
@@ -166,8 +170,6 @@ public class UserMgrImpl implements UserMgr {
 
     @Override
     public UserDTO queryLoginUser() {
-        Subject subject = SecurityUtils.getSubject();
-
-        return (UserDTO) subject.getSession().getAttribute("loginUser");
+        return sessionMgr.currentLoginUser();
     }
 }
