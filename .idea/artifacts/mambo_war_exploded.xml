@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="girl:war exploded">
+  <artifact type="exploded-war" name="mambo:war exploded">
     <output-path>$PROJECT_DIR$/target/girl</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="girl" />
+          <element id="module-output" name="mambo" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:1.4.1.RELEASE" />
@@ -115,7 +115,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/girl/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="girl/web/Web" />
+      <element id="javaee-facet-resources" facet="mambo/web/Web" />
     </root>
   </artifact>
 </component>

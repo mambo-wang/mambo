@@ -8,7 +8,7 @@
     <!--反写的公司网址+项目名-->
     <groupId>com.wb.wbao</groupId>
     <!--项目名+模块名-->
-    <artifactId>girl</artifactId>
+    <artifactId>mambo</artifactId>
     <!--第一个0表示大版本号，第二个0表示分支版本号，第三个0表示小版本号
     snapshot快照
     alpha内部测试

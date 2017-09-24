@@ -9,6 +9,11 @@
             method:'GET',
             isArray:true,
             params:{secondaryUrl:'downloads'}
+        },
+        'loginUser':{
+            method:'GET',
+            isArray:false,
+            params:{secondaryUrl:'loginUser'}
         }
     };
     return $resource('/mambo/users/:id:idList:secondaryUrl', null, extMethod);
