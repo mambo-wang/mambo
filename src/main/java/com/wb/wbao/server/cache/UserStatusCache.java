@@ -31,7 +31,7 @@ public enum UserStatusCache {
         readLock.lock();
         try {
             logger.info("get status by loginName- {}", loginName);
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(3);
             return userStatus.get(loginName);
         } catch (InterruptedException e) {
             e.printStackTrace();
