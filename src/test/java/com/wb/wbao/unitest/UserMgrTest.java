@@ -1,5 +1,7 @@
 package com.wb.wbao.unitest;
 
+import com.wb.wbao.common.concurrent.MonitorMgr;
+import com.wb.wbao.common.concurrent.TaskMsg;
 import com.wb.wbao.dto.UserDTO;
 import com.wb.wbao.server.user.User;
 import com.wb.wbao.server.user.UserMgr;
@@ -13,13 +15,34 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserMgrTest {
 
     @Resource
+    private MonitorMgr monitorMgr;
+
+    @Resource
     private UserMgr userMgr;
+
+    @Test
+    public void testCall() {
+
+        Future<TaskMsg> future = monitorMgr.postRequest(null, null);
+
+        try {
+            System.out.println(future.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
     @Test
     public void getUser() {
