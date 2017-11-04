@@ -24,6 +24,13 @@ public class FutureTest {
         System.out.println("two");
         future.get(3, TimeUnit.SECONDS);
 
+        Runnable runnable = () -> calc(88);
+        Future fu = service.submit(Executors.callable(runnable));
+        Future fu2 = service.submit(() -> calc(88));
+
+        System.out.println(fu2.get());
+
+
 
     }
 

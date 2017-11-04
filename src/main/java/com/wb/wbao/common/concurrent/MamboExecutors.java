@@ -23,7 +23,14 @@ public class MamboExecutors {
         return instance;
     }
 
+    /** 公共线程池 */
     private volatile ExecutorService mamboService = null;
+
+    /** I/O 密集型任务线程池 */
+    private volatile ExecutorService ioBoundService = null;
+
+    /** CPU 密集型任务线程池 */
+    private volatile ExecutorService cpuBoundService = null;
 
     private static final Logger logger = LoggerFactory.getLogger(MamboExecutors.class);
 
@@ -44,4 +51,41 @@ public class MamboExecutors {
         }
         return mamboService;
     }
+
+    public ExecutorService getIoBoundService() {
+        if(Objects.isNull(this.ioBoundService)){
+            synchronized (this) {
+                if(Objects.isNull(this.ioBoundService)){
+                    final int CORE = Runtime.getRuntime().availableProcessors();
+                    logger.info("core pool size is {}", CORE);
+                    ioBoundService = new ThreadPoolExecutor(CORE * 2,//IO密集型，corePoolSize大一点好
+                            CORE * 4,
+                            THREAD_IDLE, TimeUnit.SECONDS,
+                            new LinkedBlockingDeque<>(THREAD_CAPACITY),
+                            new DaemonThreadFactory("ioBoundService"),
+                            new RejectedExecutionHandlerImpl());
+                }
+            }
+        }
+        return ioBoundService;
+    }
+
+    public ExecutorService getCpuBoundService() {
+        if(Objects.isNull(this.cpuBoundService)){
+            synchronized (this) {
+                if(Objects.isNull(this.cpuBoundService)){
+                    final int CORE = Runtime.getRuntime().availableProcessors();
+                    logger.info("core pool size is {}", CORE);
+                    cpuBoundService = new ThreadPoolExecutor(CORE + 1,
+                            CORE + 1,
+                            0L, TimeUnit.SECONDS,//空闲线程立即干掉
+                            new LinkedBlockingQueue<>(Integer.MAX_VALUE),//容量巨大，不会满的
+                            new DaemonThreadFactory("cpuBoundService"),
+                            new RejectedExecutionHandlerImpl());
+                }
+            }
+        }
+        return cpuBoundService;
+    }
+
 }
