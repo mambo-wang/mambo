@@ -1,4 +1,4 @@
-package com.wb.wbao.common.concurrent;
+package com.wb.wbao.common.request;
 
 import com.wb.wbao.server.user.User;
 

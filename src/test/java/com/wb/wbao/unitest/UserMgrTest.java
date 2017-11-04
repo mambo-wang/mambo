@@ -1,7 +1,7 @@
 package com.wb.wbao.unitest;
 
-import com.wb.wbao.common.concurrent.MonitorMgr;
-import com.wb.wbao.common.concurrent.TaskMsg;
+import com.wb.wbao.common.monitor.MonitorMgr;
+import com.wb.wbao.common.monitor.TaskMsg;
 import com.wb.wbao.dto.UserDTO;
 import com.wb.wbao.server.user.User;
 import com.wb.wbao.server.user.UserMgr;

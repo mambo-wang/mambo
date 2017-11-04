@@ -1,4 +1,4 @@
-package com.wb.wbao.common.concurrent;
+package com.wb.wbao.common.monitor;
 
 import java.io.Serializable;
 import java.util.Date;

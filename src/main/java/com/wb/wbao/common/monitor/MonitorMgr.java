@@ -1,4 +1,6 @@
-package com.wb.wbao.common.concurrent;
+package com.wb.wbao.common.monitor;
+
+import com.wb.wbao.common.request.RequestData;
 
 import java.util.concurrent.Future;
 
