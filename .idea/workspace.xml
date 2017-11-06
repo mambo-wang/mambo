@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ceabb6c0-6880-4a8c-9897-84b5c88a918f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/async/AsyncTaskHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/unitest/RequestMgrTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/wb/wbao/unitest/UserMgrTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/wb/wbao/unitest/UserMgrTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/monitor/MonitorMgrImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/monitor/MonitorMgrImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestData.java" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/application-prod.properties" afterPath="$PROJECT_DIR$/src/test/resources/application-prod.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/application-prod.properties" afterPath="$PROJECT_DIR$/target/test-classes/application-prod.properties" />
     </list>
     <ignored path="girl.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,41 +66,11 @@
       <file leaf-file-name="RequestMgrImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="26" column="98" lean-forward="false" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
+            <state relative-caret-position="350">
+              <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application-prod.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/application-prod.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application-dev.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/application-dev.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -127,8 +90,8 @@
       <file leaf-file-name="RequestMgrTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/unitest/RequestMgrTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            <state relative-caret-position="115">
+              <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -240,10 +203,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgr.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/monitor/MonitorMgrImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/unitest/RequestMgrTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/async/AsyncTaskHandler.java" />
         <option value="$PROJECT_DIR$/src/test/resources/application-prod.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java" />
       </list>
     </option>
   </component>
@@ -1098,7 +1061,7 @@
       <workItem from="1506253065129" duration="4367000" />
       <workItem from="1506300849874" duration="1891000" />
       <workItem from="1507619726930" duration="2779000" />
-      <workItem from="1508998763919" duration="42285000" />
+      <workItem from="1508998763919" duration="42650000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1499593949918</created>
@@ -1394,7 +1357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509786184045</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="时间：11月6日：1、任务进度调度器">
+      <created>1509975999313</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1509975999313</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1422,15 +1392,15 @@
     <history-entry file="RequestMgrTest_testRequestAndMonitor - 2017.11.06 at 21h 46m 08s.xml">
       <configuration name="RequestMgrTest.testRequestAndMonitor" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserMgrTest_testCall - 2017.11.04 at 16h 51m 00s.xml">
-      <configuration name="UserMgrTest.testCall" configurationId="JUnit" />
+    <history-entry file="RequestMgrTest_testRequestAndMonitor - 2017.11.06 at 21h 51m 47s.xml">
+      <configuration name="RequestMgrTest.testRequestAndMonitor" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserMgrTest_testCall - 2017.11.06 at 15h 52m 37s.xml">
       <configuration name="UserMgrTest.testCall" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232458000" />
+    <option name="totallyTimeSpent" value="232823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1616" height="876" extended-state="6" />
@@ -1486,7 +1456,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="博客" />
     <MESSAGE value="时间：9月9日&#10;改动：1、引入Swagger-UI 前端动态api&#10;2、引入logback日志框架，记录日志，每天生成日志文件" />
     <MESSAGE value="时间：9月9日&#10;改动：1、引入sprint AOP面向切面编程" />
     <MESSAGE value="时间：9月9日&#10;改动：1、用户列表展示，用户增加。登录页面优化" />
@@ -1511,14 +1480,15 @@
     <MESSAGE value="时间：11月1日：1、CompletableFuture" />
     <MESSAGE value="时间：11月4日：1、根据任务类型（IO密集，CPU密集）创建线程池" />
     <MESSAGE value="时间：11月4日：1、任务进度监控器" />
-    <option name="LAST_COMMIT_MESSAGE" value="时间：11月4日：1、任务进度监控器" />
+    <MESSAGE value="时间：11月6日：1、任务进度调度器" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间：11月6日：1、任务进度调度器" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java</url>
-          <line>26</line>
+          <line>32</line>
           <properties />
           <option name="timeStamp" value="39" />
         </line-breakpoint>
@@ -1900,16 +1870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/unitest/RequestMgrTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/application-prod.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1952,10 +1912,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/unitest/RequestMgrTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="26" column="98" lean-forward="false" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
+        <state relative-caret-position="350">
+          <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.ExecutorService;
 
 @Service("requestMgr")
@@ -24,13 +25,18 @@ public class RequestMgrImpl implements RequestMgr {
     @Override
     public void register(int requestType, RequestReceiver requestReceiver) {
 
-        Optional<Set<RequestReceiver>> receivers = Optional.ofNullable(listeners.get(requestType));
+        Set<RequestReceiver> tasks = new CopyOnWriteArraySet<>();
+        tasks.add(requestReceiver);
+        listeners.put(requestType, tasks);
+        logger.info("add an listener");
 
-        receivers.ifPresent(requestReceivers -> {
-            requestReceivers.add(requestReceiver);
-            listeners.put(requestType, requestReceivers);
-            logger.info("add an listener");
-        });
+//        Optional<Set<RequestReceiver>> receivers = Optional.ofNullable(listeners.get(requestType));
+//
+//        receivers.ifPresent(requestReceivers -> {
+//            requestReceivers.add(requestReceiver);
+//            listeners.put(requestType, requestReceivers);
+//            logger.info("add an listener");
+//        });
 
     }
 
