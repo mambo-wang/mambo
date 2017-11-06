@@ -4,6 +4,9 @@ import com.wb.wbao.server.user.User;
 
 public class RequestData<T> {
 
+    public static final int ASYNC_TEST_ONE = 1;
+    public static final int ASYNC_TEST_TWO = 2;
+
     /** 请求类型 */
     private int requestType;
 
@@ -15,6 +18,9 @@ public class RequestData<T> {
 
     /** 推送前台任务台进度使用 */
     private long massageId;
+
+    /** 推送前台任务台 */
+    private boolean sendWebMsg;
 
     public RequestData() {
     }
@@ -59,5 +65,11 @@ public class RequestData<T> {
     }
 
 
+    public boolean isSendWebMsg() {
+        return sendWebMsg;
+    }
 
+    public void setSendWebMsg(boolean sendWebMsg) {
+        this.sendWebMsg = sendWebMsg;
+    }
 }

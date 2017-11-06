@@ -2,6 +2,8 @@ package com.wb.wbao.common.monitor;
 
 import com.wb.wbao.common.concurrent.MamboExecutors;
 import com.wb.wbao.common.request.RequestData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -15,6 +17,8 @@ public class MonitorMgrImpl implements MonitorMgr {
 
 
     private ExecutorService cpuBoundService = MamboExecutors.get().getCpuBoundService();
+
+    private Logger logger = LoggerFactory.getLogger(MonitorMgrImpl.class);
 
     @Override
     public Future<TaskMsg> postRequest(RequestData requestData, Long msgId) {
@@ -39,6 +43,7 @@ public class MonitorMgrImpl implements MonitorMgr {
                 TaskMsg result = new TaskMsg();
                 result.setStart(new Date());
                 int progress = 0;
+                logger.info("call msgId is {}", msgId);
                 while (true) {
 
                     progress = progress + 10;
@@ -46,6 +51,7 @@ public class MonitorMgrImpl implements MonitorMgr {
 
                     if(result.getProgress() == 100){
                         result.setCompleted(true);
+                        result.setResult(TaskMsg.SUCCESS);
                     }
 
                     if(result.isCompleted()){
