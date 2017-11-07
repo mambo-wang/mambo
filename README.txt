@@ -21,7 +21,7 @@ logback的配置文件都放在/src/main/resource/文件夹下的logback.xml文�
 3、多线程处理
 自研并发任务调度器，任务进度轮询器
 
-3、目前还欠缺的功能：
+4、目前还欠缺的功能：
 （1）Shiro的remember me功能、并发登录限制功能、验证码
 （2）StringManager
 （3）统一异常处理
