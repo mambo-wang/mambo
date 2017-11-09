@@ -59,13 +59,14 @@ CREATE TABLE IF NOT EXISTS `tbl_role_permission` (
   `ROLE_ID` bigint(20) NOT NULL DEFAULT '0',
   `PERMISSION_ID` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- 正在导出表  mambo.tbl_role_permission 的数据：~2 rows (大约)
 /*!40000 ALTER TABLE `tbl_role_permission` DISABLE KEYS */;
 INSERT IGNORE INTO `tbl_role_permission` (`ID`, `ROLE_ID`, `PERMISSION_ID`) VALUES
-	(1, 1, 1),
-	(2, 2, 2);
+	(1, 1, 2),
+	(2, 2, 1),
+	(3, 1, 1);
 /*!40000 ALTER TABLE `tbl_role_permission` ENABLE KEYS */;
 
 -- 导出  表 mambo.tbl_user 结构
@@ -76,15 +77,18 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `PASSWORD` varchar(256) DEFAULT NULL COMMENT '密码',
   `COME_YEAR` int(8) DEFAULT '2017' COMMENT '入职年份',
   `SALT` varchar(256) DEFAULT NULL COMMENT '加密密码的盐',
-  `STATE` int(8) DEFAULT NULL COMMENT '用户状态0:创建未认证（比如没有激活，没有输入验证码等等）--等待验证的用户 , 1:正常状态,2：用户被锁定.  ',
+  `STATE` int(8) DEFAULT '1' COMMENT '用户状态0:创建未认证（比如没有激活，没有输入验证码等等）--等待验证的用户 , 1:正常状态,2：用户被锁定.  ',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='用户表';
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
--- 正在导出表  mambo.tbl_user 的数据：~2 rows (大约)
+-- 正在导出表  mambo.tbl_user 的数据：~4 rows (大约)
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
 INSERT IGNORE INTO `tbl_user` (`ID`, `LOGIN_NAME`, `USERNAME`, `PASSWORD`, `COME_YEAR`, `SALT`, `STATE`) VALUES
-	(1, 'admin', 'admin', 'd3c59d25033dbf980d29554025c23a75', 2017, '8d78869f470951332959580424d4bf4f', NULL),
-	(2, 'wbao', 'wangbao', 'wangbao', 2010, NULL, NULL);
+	(1, 'admin', 'admin', 'd3c59d25033dbf980d29554025c23a75', 2017, '8d78869f470951332959580424d4bf4f', 1),
+	(19, '123', '哈哈哈', 'd9a89510387240aec5e5ae3c3248ce5c', 2017, 'e4bc77ff8c1285c253f882d2d096482d', 1),
+	(20, 'wbao', 'w', 'f13315f746578c90096a864cd4719379', 2111, 'da68eeeb4eef3b6fc13df2ec089cde3b', 1),
+	(21, 'wangbao', '121', '542c8519175c47ac67c0764e2d381f9c', 2121, 'ce9fa99345e799cde11535987e795f3c', 1),
+	(22, 'wbao1', '111', '647e83d09b4ecb6e52f24ce4d3fb3557', 2111, '917b098506ecf4d9f9b722d373dcdff1', 1);
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
 
 -- 导出  表 mambo.tbl_user_role 结构
@@ -93,14 +97,17 @@ CREATE TABLE IF NOT EXISTS `tbl_user_role` (
   `USER_ID` bigint(20) NOT NULL DEFAULT '0',
   `ROLE_ID` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- 正在导出表  mambo.tbl_user_role 的数据：~3 rows (大约)
+-- 正在导出表  mambo.tbl_user_role 的数据：~6 rows (大约)
 /*!40000 ALTER TABLE `tbl_user_role` DISABLE KEYS */;
 INSERT IGNORE INTO `tbl_user_role` (`ID`, `USER_ID`, `ROLE_ID`) VALUES
 	(1, 1, 1),
-	(2, 2, 2),
-	(3, 1, 2);
+	(3, 1, 2),
+	(4, 19, 2),
+	(5, 20, 1),
+	(6, 21, 1),
+	(7, 22, 1);
 /*!40000 ALTER TABLE `tbl_user_role` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

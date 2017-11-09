@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ceabb6c0-6880-4a8c-9897-84b5c88a918f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/application-prod.properties" afterPath="$PROJECT_DIR$/target/test-classes/application-prod.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mambo.sql" afterPath="$PROJECT_DIR$/src/main/resources/mambo.sql" />
     </list>
     <ignored path="girl.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestMgrImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RequestMgrImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="350">
@@ -71,6 +70,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mambo.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mambo.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -355,6 +364,13 @@
               <item name="mambo" type="b2602c69:ProjectViewProjectNode" />
               <item name="mambo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mambo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mambo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -458,22 +474,22 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.wb.wbao" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\github\girl-920\girl_mambo\src\main\resources" />
-      <recent name="D:\github\girl-920\girl_mambo\src\main\resources\static\common\login" />
-      <recent name="C:\workspace\girl\girl_mambo\src\test\resources\chapter3" />
-      <recent name="C:\workspace\girl\girl_mambo\src\test\java\com\wb\wbao\shirotest" />
-      <recent name="D:\github\girl-mambo\girl_mambo\src\test\resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\workspace\girl\girl_mambo\src\test\resources\chapter2" />
       <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\dashboard" />
       <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\app" />
       <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\login" />
       <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\js" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.wb.wbao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\mambo\src\main\resources" />
+      <recent name="D:\github\girl-920\girl_mambo\src\main\resources" />
+      <recent name="D:\github\girl-920\girl_mambo\src\main\resources\static\common\login" />
+      <recent name="C:\workspace\girl\girl_mambo\src\test\resources\chapter3" />
+      <recent name="C:\workspace\girl\girl_mambo\src\test\java\com\wb\wbao\shirotest" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1061,7 +1077,7 @@
       <workItem from="1506253065129" duration="4367000" />
       <workItem from="1506300849874" duration="1891000" />
       <workItem from="1507619726930" duration="2779000" />
-      <workItem from="1508998763919" duration="42650000" />
+      <workItem from="1508998763919" duration="43466000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1499593949918</created>
@@ -1364,7 +1380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509975999313</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="时间：11月6日：1、任务进度调度器">
+      <created>1509976346535</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1509976346535</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1400,11 +1423,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232823000" />
+    <option name="totallyTimeSpent" value="233639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24594595" sideWeight="0.5025707" order="7" side_tool="true" content_ui="tabs" />
@@ -1426,7 +1448,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54594594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21015424" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21015424" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3391892" sideWeight="0.4974293" order="1" side_tool="false" content_ui="tabs" />
@@ -1502,14 +1524,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ehcache.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/banner.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -1929,6 +1943,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mambo.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
