@@ -39,7 +39,7 @@ public class MamboExecutors {
             synchronized (this) {
                 if(Objects.isNull(this.mamboService)){
                     final int CORE = Runtime.getRuntime().availableProcessors();
-                    logger.info("core pool size is {}", CORE);
+                    logger.info("mambo service core pool size is {}", CORE);
                     mamboService = new ThreadPoolExecutor(CORE,
                             CORE * 2,
                             THREAD_IDLE, TimeUnit.SECONDS,
@@ -57,7 +57,7 @@ public class MamboExecutors {
             synchronized (this) {
                 if(Objects.isNull(this.ioBoundService)){
                     final int CORE = Runtime.getRuntime().availableProcessors();
-                    logger.info("core pool size is {}", CORE);
+                    logger.info("io bound service core pool size is {}", CORE * 2);
                     ioBoundService = new ThreadPoolExecutor(CORE * 2,//IO密集型，corePoolSize大一点好
                             CORE * 4,
                             THREAD_IDLE, TimeUnit.SECONDS,
@@ -75,7 +75,7 @@ public class MamboExecutors {
             synchronized (this) {
                 if(Objects.isNull(this.cpuBoundService)){
                     final int CORE = Runtime.getRuntime().availableProcessors();
-                    logger.info("core pool size is {}", CORE);
+                    logger.info("cpu bound service core pool size is {}", CORE + 1);
                     cpuBoundService = new ThreadPoolExecutor(CORE + 1,
                             CORE + 1,
                             0L, TimeUnit.SECONDS,//空闲线程立即干掉

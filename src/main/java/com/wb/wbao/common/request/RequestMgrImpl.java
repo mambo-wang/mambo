@@ -25,19 +25,13 @@ public class RequestMgrImpl implements RequestMgr {
     @Override
     public void register(int requestType, RequestReceiver requestReceiver) {
 
-        Set<RequestReceiver> tasks = new CopyOnWriteArraySet<>();
-        tasks.add(requestReceiver);
-        listeners.put(requestType, tasks);
-        logger.info("add an listener");
-
-//        Optional<Set<RequestReceiver>> receivers = Optional.ofNullable(listeners.get(requestType));
-//
-//        receivers.ifPresent(requestReceivers -> {
-//            requestReceivers.add(requestReceiver);
-//            listeners.put(requestType, requestReceivers);
-//            logger.info("add an listener");
-//        });
-
+        Set<RequestReceiver> receivers = listeners.get(requestType);
+        if(CollectionUtils.isEmpty(receivers)){
+            receivers = new CopyOnWriteArraySet<>();
+        }
+        receivers.add(requestReceiver);
+        listeners.put(requestType, receivers);
+        logger.info("add an listener, listener's size is {}", receivers.size());
     }
 
     @Override

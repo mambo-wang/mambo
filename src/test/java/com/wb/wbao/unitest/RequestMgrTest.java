@@ -19,12 +19,8 @@ public class RequestMgrTest {
     @Resource
     private RequestMgr requestMgr;
 
-    @Resource
-    private AsyncTaskHandler asyncTaskHandler;
-
     @Test
     public void testRequestAndMonitor() {
-        requestMgr.register(RequestData.ASYNC_TEST_ONE, asyncTaskHandler::startAsyncTaskOne);
 
         RequestData requestData = new RequestData(RequestData.ASYNC_TEST_ONE, "good", null, 1L);
 
