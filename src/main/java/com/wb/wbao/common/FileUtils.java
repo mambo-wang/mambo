@@ -6,11 +6,11 @@ public final class FileUtils {
 
 
     private static void checkRootDir() {
-        createDir("C:\\filetest");
+        createDir(Constant.ROOT_DIR);
     }
 
     private static void checkUserParentDir() {
-        createDir("C:\\filetest\\user");
+        createDir(Constant.USER_PERSONAL_PARENT);
     }
 
     public static void checkUserDir(Long userId) {
