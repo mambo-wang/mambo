@@ -61,6 +61,11 @@ public class FileTest {
 
         /** 删除文件或者文件夹 */
 //        System.out.println("delete:" + file.delete());
+        System.out.println("====================================================");
 
+        /** 文件过滤器 */
+        String[] strings = file.list(((dir, name) -> name.endsWith(".txt") &&
+                !new File(dir.getAbsolutePath() + "\\" + name).isDirectory()));
+        Arrays.stream(strings).forEach(System.out::println);
     }
 }
