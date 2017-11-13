@@ -1,5 +1,6 @@
 package com.wb.wbao.server.user;
 
+import com.wb.wbao.common.FileUtils;
 import com.wb.wbao.common.PasswordHelper;
 import com.wb.wbao.dto.UserDTO;
 import com.wb.wbao.server.email.EmailMgrImpl;
@@ -36,10 +37,14 @@ public class UserMgrImpl implements UserMgr {
     @Override
     public List<UserDTO> queryAll() {
         logger.debug("query all user");
-        return userDao.findAll()
+        List<UserDTO> userDTOS = userDao.findAll()
                 .stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
+
+        userDTOS.forEach(userDTO -> FileUtils.checkUserDir(userDTO.getId()));
+
+        return userDTOS;
     }
 
     @Override
@@ -51,7 +56,9 @@ public class UserMgrImpl implements UserMgr {
     public User createUser(UserDTO userDTO) {
         User user = this.convertToUser(userDTO);
         passwordHelper.encryptPassword(user);
-        return userDao.save(user);
+        User userDB =  userDao.save(user);
+        FileUtils.checkUserDir(userDB.getId());
+        return userDB;
     }
 
     @Override
@@ -62,7 +69,12 @@ public class UserMgrImpl implements UserMgr {
 
     @Override
     public void removeUsers(List<Long> userIds) {
-        userIds.forEach(userDao::delete);
+        userIds.forEach(this::deleteUser);
+    }
+
+    private void deleteUser(Long userId){
+        FileUtils.deleteUserDir(userId);
+        userDao.delete(userId);
     }
 
     @Override

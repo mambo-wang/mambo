@@ -1,7 +1,5 @@
 package com.wb.wbao.unitest;
 
-import com.wb.wbao.common.monitor.MonitorMgr;
-import com.wb.wbao.common.monitor.TaskMsg;
 import com.wb.wbao.dto.UserDTO;
 import com.wb.wbao.server.user.User;
 import com.wb.wbao.server.user.UserMgr;
@@ -13,36 +11,15 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import javax.annotation.Resource;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
+import java.util.Arrays;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserMgrTest {
 
     @Resource
-    private MonitorMgr monitorMgr;
-
-    @Resource
     private UserMgr userMgr;
-
-    @Test
-    public void testCall() {
-
-        Future<TaskMsg> future = monitorMgr.postRequest(null, null);
-
-        try {
-            System.out.println(future.get());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
-
-
-    }
 
     @Test
     public void getUser() {
@@ -60,6 +37,11 @@ public class UserMgrTest {
         userDTO.setComeYear(2017);
 
         userMgr.createUser(userDTO);
+    }
+
+    @Test
+    public void removeUser(){
+        userMgr.removeUsers(Arrays.asList(23L));
     }
 
     public void loginTest() {
