@@ -14,6 +14,51 @@ public class FileTest {
 //        testReader();
 
 //        testWriter();
+
+//        testPrintStream();
+
+//        testOutputStreamReader();
+
+        testReadFromProcess();
+
+    }
+
+    /**
+     * 获取另一个进程的输出流
+     * @throws IOException
+     */
+    private static void testReadFromProcess() throws IOException {
+
+        Process p = Runtime.getRuntime().exec("javac");
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(p.getErrorStream()))){
+
+            String buff = null;
+            while ((buff = br.readLine()) != null) {
+
+                System.out.println(buff);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 转换流：字节流转换为字符流
+     */
+    private static void testOutputStreamReader(){
+        try(InputStreamReader reader = new InputStreamReader(System.in);
+            BufferedReader br = new BufferedReader(reader)){
+
+            String line = null;
+            while ((line = br.readLine()) != null) {
+                if(line.equals("exit")){
+                    System.exit(1);
+                }
+                System.out.println("输入内容为：" + line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -33,7 +78,6 @@ public class FileTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private static void testWriter() {
@@ -146,5 +190,10 @@ public class FileTest {
         String[] strings = file.list(((dir, name) -> name.endsWith(".txt") &&
                 !new File(dir.getAbsolutePath() + "\\" + name).isDirectory()));
         Arrays.stream(strings).forEach(System.out::println);
+    }
+
+    @Override
+    public String toString() {
+        return "FileTest{a FileTest instance}";
     }
 }

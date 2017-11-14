@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="ceabb6c0-6880-4a8c-9897-84b5c88a918f" name="Default" comment="">
+    <list default="true" readonly="true" id="ceabb6c0-6880-4a8c-9897-84b5c88a918f" name="Default" comment="时间：11月13日：1、各种流，InputStream，Reader,Writer,PrintStream">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java" />
     </list>
     <ignored path="girl.iws" />
@@ -25,13 +26,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="FileTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            <state relative-caret-position="152">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5674#5675#0" expanded="true" />
+                <element signature="e#5728#5729#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,7 +139,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/unitest/RequestMgrTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/unitest/UserMgrTest.java" />
-        <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/Constant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/common/FileUtils.java" />
@@ -134,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/file/FileMgr.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/unitest/FileMgrTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/file/FileMgrImpl.java" />
+        <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java" />
       </list>
     </option>
@@ -993,14 +1006,7 @@
       <workItem from="1507619726930" duration="2779000" />
       <workItem from="1508998763919" duration="43574000" />
       <workItem from="1510231277723" duration="21868000" />
-      <workItem from="1510619896269" duration="6180000" />
-    </task>
-    <task id="LOCAL-00002" summary="init">
-      <created>1500691084486</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1500691084486</updated>
+      <workItem from="1510619896269" duration="11979000" />
     </task>
     <task id="LOCAL-00003" summary="init">
       <created>1500691508619</created>
@@ -1338,7 +1344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510568522954</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="时间：11月13日：1、各种流，InputStream，Reader,Writer,PrintStream">
+      <created>1510628933336</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1510628933336</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1374,7 +1387,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261795000" />
+    <option name="totallyTimeSpent" value="267594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1616" height="876" extended-state="6" />
@@ -1389,7 +1402,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34054053" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41486487" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32567567" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1430,7 +1443,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="时间：9月14日&#10;改动：2、修改main.js和user用户模块。" />
     <MESSAGE value="时间：9月14日&#10;改动：1、删除controllers这个ng-app，现在万事俱备只欠东风了，接下来开始做shiro。" />
     <MESSAGE value="时间：9月14日&#10;改动：1、引入邮件发送功能，测试通过。" />
     <MESSAGE value="时间：9月14日&#10;改动：1、邮件发送带附件（图片），测试通过。" />
@@ -1455,7 +1467,8 @@
     <MESSAGE value="时间：11月11日：1、增删用户时增删对应的个人目录，2、练习File类相关用法" />
     <MESSAGE value="时间：11月13日：1、查询所有文件（文件夹）2、清空文件夹" />
     <MESSAGE value="时间：11月13日：1、文件过滤器" />
-    <option name="LAST_COMMIT_MESSAGE" value="时间：11月13日：1、文件过滤器" />
+    <MESSAGE value="时间：11月13日：1、各种流，InputStream，Reader,Writer,PrintStream" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间：11月13日：1、各种流，InputStream，Reader,Writer,PrintStream" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1468,13 +1481,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/common/monitor/MonitorMgr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/common/monitor/TaskMsg.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1722,14 +1728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/unitest/RequestMgrTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1867,12 +1865,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="82" column="36" lean-forward="false" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+          <folding>
+            <element signature="e#40171#40172#0" expanded="false" />
+            <element signature="e#40220#40221#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        <state relative-caret-position="152">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5674#5675#0" expanded="true" />
+            <element signature="e#5728#5729#0" expanded="true" />
           </folding>
         </state>
       </provider>
