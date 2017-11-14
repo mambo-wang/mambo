@@ -19,9 +19,41 @@ public class FileTest {
 
 //        testOutputStreamReader();
 
-        testReadFromProcess();
+//        testReadFromProcess();
 
+        testRandomAccessFile();
     }
+
+    /**
+     * 测试任意访问类
+     */
+    private static void testRandomAccessFile() {
+        try(RandomAccessFile raf = new RandomAccessFile("C:/filetest/user/user-1/printStreamTest.txt", "rw")){
+            System.out.println("pointer 初始位置：" + raf.getFilePointer());
+            System.out.println("总长度：" + raf.length());
+
+            //移动到某一个位置，raf.length()表示移动到最后
+            raf.seek(raf.length());
+            byte[] bbuf = new byte[1024];
+            int hasRead = 0;
+
+            /** 从指定位置开始读取 */
+            while ((hasRead = raf.read(bbuf)) > 0) {
+                System.out.println(new String(bbuf, 0, hasRead));
+            }
+
+            /** 写入，如果从文本中间写入的话会覆盖原有内容，
+             *  如果需要从中间插入，则需要先保存插入点之后的内容，在重新写进来
+             * */
+            raf.write("追加的内容！\r\n".getBytes());
+            raf.write("追加的内容！\r\n".getBytes());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     /**
      * 获取另一个进程的输出流
