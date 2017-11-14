@@ -1,18 +1,97 @@
 package com.wb.wbao.filetest;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 
 public class FileTest {
 
     public static void main(String[] args) throws IOException {
 
-        testFileMethod();
+//        testFileMethod();
+
+//        testInputStreamAndOutputStream();
+
+//        testReader();
+
+//        testWriter();
+    }
+
+    /**
+     * 通常需要输出文本内容时，都包装成PrintStream来进行操作
+     */
+    private static void testPrintStream() {
+
+        try(FileOutputStream fos = new FileOutputStream("C:/filetest/user/user-1/printStreamTest.txt");
+            PrintStream ps = new PrintStream(fos)){
+
+            ps.println("普通字符串");
+
+            ps.println(new FileTest());
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
+    private static void testWriter() {
+        try (FileWriter fw = new FileWriter("C:/filetest/user/user-1/poem.txt")){
+            fw.write("锄禾日当午");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    private static void testReader() throws IOException {
+
+        try (FileReader reader = new FileReader("C:/filetest/user/user-1/FileTest.java")){
+
+            char[] cbuf = new char[20];
+
+            int hasRead = 0;
+
+            while ((hasRead = reader.read(cbuf)) > 0) {
+
+                System.out.println(new String(cbuf, 0, hasRead));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 测试输入流和输出流，实现复制文件内容
+     */
+    private static void testInputStreamAndOutputStream() throws IOException {
+
+        try (FileInputStream fis = new FileInputStream("C:/filetest/user/user-1/FileTest.java");
+             FileOutputStream fos = new FileOutputStream("C:/filetest/user/user-1/FileOutTest.txt")){
+            byte[] bbuf = new byte[20];
+
+            /** 本地读取的字节数量 */
+            int hasRead = 0;
+
+            /** 读 */
+            while ((hasRead = fis.read(bbuf)) > 0) {
+
+                System.out.println(new String(bbuf, 0, hasRead));
+
+                /** 写 */
+                fos.write(bbuf, 0, hasRead);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    /**
+     * 测试File类相关方法
+     * @throws IOException IO异常
+     */
     public static void testFileMethod() throws IOException {
         /** 列出所有根目录 */
         File[] files = File.listRoots();
