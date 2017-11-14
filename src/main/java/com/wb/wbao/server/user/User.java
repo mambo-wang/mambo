@@ -3,6 +3,7 @@ package com.wb.wbao.server.user;
 import com.wb.wbao.server.role.Role;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -10,8 +11,9 @@ import java.util.List;
  */
 @Entity
 @Table(name = "tbl_user")
-public class User {
+public class User implements Serializable{
 
+    private static final long serialVersionUID = 2696455551572668372L;
     public static final Integer ROLE_TYPE_ADMIN = 1;
     public static final Integer ROLE_TYPE_COMMON = 0;
 
@@ -112,5 +114,19 @@ public class User {
 
     public String getCredentialsSalt() {
         return username + salt;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", loginName='" + loginName + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", comeYear=" + comeYear +
+                ", salt='" + salt + '\'' +
+                ", state=" + state +
+                ", roleList=" + roleList +
+                '}';
     }
 }

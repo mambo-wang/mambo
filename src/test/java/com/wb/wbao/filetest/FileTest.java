@@ -1,5 +1,7 @@
 package com.wb.wbao.filetest;
 
+import com.wb.wbao.server.user.User;
+
 import java.io.*;
 import java.util.Arrays;
 
@@ -21,9 +23,40 @@ public class FileTest {
 
 //        testReadFromProcess();
 
-        testRandomAccessFile();
+//        testRandomAccessFile();
+
+        testObjectOutputStream();
     }
 
+    /**
+     * 利用ObjectOutputStream序列化，ObjectInputStream反序列化
+     */
+    private static void testObjectOutputStream() {
+
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:/filetest/user/user-1/Object.class"))){
+            User user = new User();
+            user.setLoginName("admin");
+            user.setUsername("admin");
+            user.setComeYear(2017);
+            oos.writeObject(user);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("C:/filetest/user/user-1/Object.class"))) {
+            User u = (User)ois.readObject();
+            System.out.println(u);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
     /**
      * 测试任意访问类
      */

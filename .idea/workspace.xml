@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ceabb6c0-6880-4a8c-9897-84b5c88a918f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/role/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/role/Role.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/user/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/user/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java" />
     </list>
     <ignored path="girl.iws" />
@@ -38,23 +40,39 @@
       <file leaf-file-name="FileTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+            <state relative-caret-position="233">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6704#6705#0" expanded="true" />
-                <element signature="e#6758#6759#0" expanded="true" />
+                <element signature="e#7806#7807#0" expanded="true" />
+                <element signature="e#7860#7861#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomAccessFile.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/io/RandomAccessFile.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/server/user/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="120" column="11" lean-forward="false" selection-start-line="120" selection-start-column="11" selection-end-line="120" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="1027">
+              <caret line="48" column="11" lean-forward="false" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+              <folding>
+                <element signature="e#2438#2439#0" expanded="true" />
+                <element signature="e#2476#2477#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Role.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/server/role/Role.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="75" column="18" lean-forward="false" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
+              <folding>
+                <element signature="e#1671#1672#0" expanded="true" />
+                <element signature="e#1717#1718#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,8 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/config/shiro/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/common/user/user.service.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/user/UserMgr.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/home.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/signin.html" />
@@ -156,6 +172,8 @@
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/unitest/FileMgrTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/file/FileMgrImpl.java" />
         <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/user/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/role/Role.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java" />
       </list>
     </option>
@@ -186,8 +204,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="800" />
-    <option name="y" value="63" />
+    <option name="x" value="850" />
+    <option name="y" value="89" />
     <option name="width" value="800" />
     <option name="height" value="739" />
   </component>
@@ -323,6 +341,36 @@
               <item name="mambo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wbao" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="permission" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mambo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mambo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wbao" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="role" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mambo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mambo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wbao" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mambo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mambo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -398,13 +446,6 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/io/File.java" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\workspace\girl\girl_mambo\src\test\resources\chapter2" />
-      <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\dashboard" />
-      <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\app" />
-      <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\login" />
-      <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\js" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.wb.wbao" />
     </key>
@@ -414,6 +455,13 @@
       <recent name="D:\github\girl-920\girl_mambo\src\main\resources\static\common\login" />
       <recent name="C:\workspace\girl\girl_mambo\src\test\resources\chapter3" />
       <recent name="C:\workspace\girl\girl_mambo\src\test\java\com\wb\wbao\shirotest" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace\mambo\src\test\java\com\wb\wbao\filetest" />
+      <recent name="C:\workspace\girl\girl_mambo\src\test\resources\chapter2" />
+      <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\dashboard" />
+      <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\app" />
+      <recent name="C:\workspace\girl-mambo\girl_mambo\src\main\resources\static\common\login" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1015,14 +1063,7 @@
       <workItem from="1507619726930" duration="2779000" />
       <workItem from="1508998763919" duration="43574000" />
       <workItem from="1510231277723" duration="21868000" />
-      <workItem from="1510619896269" duration="16083000" />
-    </task>
-    <task id="LOCAL-00004" summary="init">
-      <created>1500691971727</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1500691971727</updated>
+      <workItem from="1510619896269" duration="18291000" />
     </task>
     <task id="LOCAL-00005" summary="git学习">
       <created>1500714633102</created>
@@ -1360,7 +1401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510643043968</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="时间：11月14日：1、RandomAccessFile类练习">
+      <created>1510648789583</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1510648789583</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1396,7 +1444,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271698000" />
+    <option name="totallyTimeSpent" value="273906000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1616" height="876" extended-state="6" />
@@ -1411,7 +1459,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41486487" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41486487" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32567567" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1452,7 +1500,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="时间：9月14日&#10;改动：1、引入邮件发送功能，测试通过。" />
     <MESSAGE value="时间：9月14日&#10;改动：1、邮件发送带附件（图片），测试通过。" />
     <MESSAGE value="时间：9月14日&#10;改动：1、发送模板邮件，测试通过。" />
     <MESSAGE value="时间：9月15日&#10;改动：1、shiro开发，创建需要的数据库表和实体类。" />
@@ -1477,7 +1524,8 @@
     <MESSAGE value="时间：11月13日：1、文件过滤器" />
     <MESSAGE value="时间：11月13日：1、各种流，InputStream，Reader,Writer,PrintStream" />
     <MESSAGE value="时间：11月14日：1、转换流、获取另一进程输出流" />
-    <option name="LAST_COMMIT_MESSAGE" value="时间：11月14日：1、转换流、获取另一进程输出流" />
+    <MESSAGE value="时间：11月14日：1、RandomAccessFile类练习" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间：11月14日：1、RandomAccessFile类练习" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1490,27 +1538,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Test.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="239" column="6" lean-forward="false" selection-start-line="239" selection-start-column="6" selection-end-line="239" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/application-prod.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1614,6 +1641,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1628,6 +1656,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="17" column="47" lean-forward="false" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1683,13 +1712,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
           <caret line="71" column="42" lean-forward="true" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/server/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="92" column="23" lean-forward="false" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="23" />
+          <folding>
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1460#1461#0" expanded="true" />
+            <element signature="e#1952#1953#0" expanded="true" />
+            <element signature="e#2001#2002#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1894,14 +1922,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/server/permission/Permission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/Object.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/server/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1027">
+          <caret line="48" column="11" lean-forward="false" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+          <folding>
+            <element signature="e#2438#2439#0" expanded="true" />
+            <element signature="e#2476#2477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/server/role/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="75" column="18" lean-forward="false" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
+          <folding>
+            <element signature="e#1671#1672#0" expanded="true" />
+            <element signature="e#1717#1718#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        <state relative-caret-position="233">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6704#6705#0" expanded="true" />
-            <element signature="e#6758#6759#0" expanded="true" />
+            <element signature="e#7806#7807#0" expanded="true" />
+            <element signature="e#7860#7861#0" expanded="true" />
           </folding>
         </state>
       </provider>
