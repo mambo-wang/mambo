@@ -5,7 +5,7 @@ import com.wb.wbao.server.user.User;
 import java.io.*;
 import java.util.Arrays;
 
-public class FileTest {
+public class IOTest {
 
     public static void main(String[] args) throws IOException {
 
@@ -135,8 +135,7 @@ public class FileTest {
             PrintStream ps = new PrintStream(fos)){
 
             ps.println("普通字符串");
-
-            ps.println(new FileTest());
+            ps.println(new IOTest());
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
