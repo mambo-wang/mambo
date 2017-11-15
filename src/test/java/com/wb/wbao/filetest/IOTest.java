@@ -23,9 +23,9 @@ public class IOTest {
 
 //        testReadFromProcess();
 
-//        testRandomAccessFile();
+        testRandomAccessFile();
 
-        testObjectOutputStream();
+//        testObjectOutputStream();
     }
 
     /**

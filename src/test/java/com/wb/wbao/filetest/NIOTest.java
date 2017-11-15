@@ -1,6 +1,7 @@
 package com.wb.wbao.filetest;
 
 import java.io.*;
+import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
@@ -13,10 +14,58 @@ public class NIOTest {
 
 //        testBuffer();
 
-        testChannel();
+//        testFileChannel();
+
+//        testRandomFileChannel();
+
+        testChannelReadMethod();
     }
 
-    private static void testChannel() {
+    /** 读取大文件时，使用Channel和Buffer传统的 用竹筒多次取水的方式 */
+    private static void testChannelReadMethod() {
+
+        try (FileInputStream fis = new FileInputStream("C:/filetest/newdir/a.txt");FileChannel fcin = fis.getChannel()){
+
+            ByteBuffer bbuff = ByteBuffer.allocate(20);
+            while (fcin.read(bbuff) != -1) {
+                bbuff.flip();
+
+                Charset charset = Charset.forName("GBK");
+                CharsetDecoder decoder = charset.newDecoder();
+                CharBuffer charBuffer = decoder.decode(bbuff);
+                System.out.println(charBuffer);
+                bbuff.clear();
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private static void testRandomFileChannel() {
+        File f = new File("C:/filetest/newdir/a.txt");
+
+        try (RandomAccessFile raf = new RandomAccessFile(f, "rw");FileChannel randomChannel = raf.getChannel()){
+
+            ByteBuffer buffer = randomChannel.map(FileChannel.MapMode.READ_ONLY, 0, f.length());
+
+            System.out.println(f.length());
+            //把Channel的记录指针移动到最后
+            randomChannel.position(f.length());
+            randomChannel.write(buffer);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private static void testFileChannel() {
         File f = new File("C:/filetest/newdir/test.txt");
 
         try(FileChannel inChannel = new FileInputStream(f).getChannel();

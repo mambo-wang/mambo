@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="ceabb6c0-6880-4a8c-9897-84b5c88a918f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIOTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wb/wbao/server/role/Role.class" afterPath="$PROJECT_DIR$/target/classes/com/wb/wbao/server/role/Role.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wb/wbao/server/user/User.class" afterPath="$PROJECT_DIR$/target/classes/com/wb/wbao/server/user/User.class" />
+    <list default="true" readonly="true" id="ceabb6c0-6880-4a8c-9897-84b5c88a918f" name="Default" comment="时间：11月15日：1、Java NIO，Buffer和Channel">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIO2Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIOTest.java" />
     </list>
     <ignored path="girl.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +30,8 @@
       <file leaf-file-name="IOTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="133" column="101" lean-forward="true" selection-start-line="133" selection-start-column="56" selection-end-line="133" selection-end-column="101" />
+            <state relative-caret-position="-450">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#7801#7802#0" expanded="true" />
@@ -42,14 +41,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NIOTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NIOTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            <state relative-caret-position="100">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NIO2Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIO2Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CharBuffer.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/nio/CharBuffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-59">
+              <caret line="261" column="22" lean-forward="false" selection-start-line="261" selection-start-column="22" selection-end-line="261" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/static/signin.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/common/app/main.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/session/SessionMgr.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/session/SessionMgrImpl.java" />
@@ -153,6 +173,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/FileTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIOTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIO2Test.java" />
       </list>
     </option>
   </component>
@@ -462,7 +483,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NIOTest">
+  <component name="RunManager" selected="Application.NIO2Test">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wb.wbao.Application" />
@@ -539,6 +560,25 @@
       <module name="mambo" />
       <envs />
     </configuration>
+    <configuration name="NIO2Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.wb.wbao.filetest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.filetest.NIO2Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="mambo" />
+      <envs />
+    </configuration>
     <configuration name="NIOTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -557,31 +597,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="mambo" />
       <envs />
-    </configuration>
-    <configuration name="UserMgrTest.removeUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.wb.wbao.unitest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="mambo" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.wb.wbao.unitest" />
-      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.unitest.UserMgrTest" />
-      <option name="METHOD_NAME" value="removeUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -986,18 +1001,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
       <item index="1" class="java.lang.String" itemvalue="Application.IOTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.UserMgrTest.removeUser" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.FileMgrTest.testListFiles" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FileMgrTest.testClearDir" />
-      <item index="5" class="java.lang.String" itemvalue="Application.NIOTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.FileMgrTest.testListFiles" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.FileMgrTest.testClearDir" />
+      <item index="4" class="java.lang.String" itemvalue="Application.NIOTest" />
+      <item index="5" class="java.lang.String" itemvalue="Application.NIO2Test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.NIOTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.IOTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FileMgrTest.testClearDir" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FileMgrTest.testListFiles" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.UserMgrTest.removeUser" />
+        <item index="0" class="java.lang.String" itemvalue="Application.NIO2Test" />
+        <item index="1" class="java.lang.String" itemvalue="Application.NIOTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.IOTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FileMgrTest.testClearDir" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FileMgrTest.testListFiles" />
       </list>
     </recent_temporary>
   </component>
@@ -1043,14 +1058,7 @@
       <workItem from="1507619726930" duration="2779000" />
       <workItem from="1508998763919" duration="43574000" />
       <workItem from="1510231277723" duration="21868000" />
-      <workItem from="1510619896269" duration="26307000" />
-    </task>
-    <task id="LOCAL-00006" summary="git学习">
-      <created>1500720258073</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1500720258073</updated>
+      <workItem from="1510619896269" duration="35808000" />
     </task>
     <task id="LOCAL-00007" summary="git学习">
       <created>1502602066247</created>
@@ -1388,7 +1396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510651339197</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="时间：11月15日：1、Java NIO，Buffer和Channel">
+      <created>1510718419337</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1510718419337</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1424,7 +1439,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281922000" />
+    <option name="totallyTimeSpent" value="291423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1616" height="876" extended-state="6" />
@@ -1439,7 +1454,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44189188" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49594596" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32567567" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1447,7 +1462,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2911184" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29054055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19794345" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1480,7 +1495,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="时间：9月14日&#10;改动：1、发送模板邮件，测试通过。" />
     <MESSAGE value="时间：9月15日&#10;改动：1、shiro开发，创建需要的数据库表和实体类。" />
     <MESSAGE value="时间：9月15日&#10;改动：1、shiro开发，权限认证。" />
     <MESSAGE value="时间：9月19日&#10;改动：1、shiro开发，开涛博客，第一章。" />
@@ -1505,7 +1519,8 @@
     <MESSAGE value="时间：11月14日：1、转换流、获取另一进程输出流" />
     <MESSAGE value="时间：11月14日：1、RandomAccessFile类练习" />
     <MESSAGE value="时间：11月14日：1、ObjectInputStream和ObjectOutputStream练习，序列化" />
-    <option name="LAST_COMMIT_MESSAGE" value="时间：11月14日：1、ObjectInputStream和ObjectOutputStream练习，序列化" />
+    <MESSAGE value="时间：11月15日：1、Java NIO，Buffer和Channel" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间：11月15日：1、Java NIO，Buffer和Channel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1518,41 +1533,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/common/concurrent/MamboExecutors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="80" column="59" lean-forward="true" selection-start-line="80" selection-start-column="59" selection-end-line="80" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/common/request/RequestMgrImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="32" column="43" lean-forward="true" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/multithread/threadpool/ThreadPoolTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/multithread/threadpool/CallTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/multithread/lock/WriteReadLockTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/config/shiro/ShiroConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1178">
@@ -1936,10 +1916,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/nio/channels/FileChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="789" column="33" lean-forward="true" selection-start-line="789" selection-start-column="33" selection-end-line="789" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/nio/charset/Charset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-441">
+          <caret line="270" column="22" lean-forward="false" selection-start-line="270" selection-start-column="22" selection-end-line="270" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="133" column="101" lean-forward="true" selection-start-line="133" selection-start-column="56" selection-end-line="133" selection-end-column="101" />
+        <state relative-caret-position="-450">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#7801#7802#0" expanded="true" />
@@ -1948,10 +1952,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/nio/CharBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <caret line="261" column="22" lean-forward="false" selection-start-line="261" selection-start-column="22" selection-end-line="261" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        <state relative-caret-position="100">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIO2Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
