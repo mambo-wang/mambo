@@ -1,5 +1,7 @@
 package com.wb.wbao.filetest;
 
+import com.wb.wbao.common.Utils;
+
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
@@ -24,16 +26,15 @@ public class NIOTest {
     /** 读取大文件时，使用Channel和Buffer传统的 用竹筒多次取水的方式 */
     private static void testChannelReadMethod() {
 
-        try (FileInputStream fis = new FileInputStream("C:/filetest/newdir/a.txt");FileChannel fcin = fis.getChannel()){
+        System.out.println(Utils.formatFullDateTime(System.currentTimeMillis()));
+        try (FileInputStream fis = new FileInputStream("C:\\Users\\Administrator\\Downloads\\ideaIU-2017.2.exe");
+             FileChannel fcin = fis.getChannel();
+             FileChannel outChannel = new FileOutputStream("C:/filetest/newdir/stu-ideaIU-2017.2.exe").getChannel()){
 
-            ByteBuffer bbuff = ByteBuffer.allocate(20);
+            ByteBuffer bbuff = ByteBuffer.allocate(1024);
             while (fcin.read(bbuff) != -1) {
                 bbuff.flip();
-
-                Charset charset = Charset.forName("GBK");
-                CharsetDecoder decoder = charset.newDecoder();
-                CharBuffer charBuffer = decoder.decode(bbuff);
-                System.out.println(charBuffer);
+                outChannel.write(bbuff);
                 bbuff.clear();
             }
 
@@ -42,6 +43,8 @@ public class NIOTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println(Utils.formatFullDateTime(System.currentTimeMillis()));
+
 
     }
 

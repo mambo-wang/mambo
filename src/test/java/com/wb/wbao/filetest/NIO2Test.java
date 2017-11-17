@@ -3,10 +3,7 @@ package com.wb.wbao.filetest;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.nio.file.FileStore;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +14,42 @@ public class NIO2Test {
 
 //        testPathsMethod();
 
-        testFilesMethod();
+//        testFilesMethod();
+
+        testWatchService();
+
+    }
+
+    /**
+     * 监控文件变化，貌似只能检测到一级子目录的删除事件
+     */
+    private static void testWatchService() {
+
+        try {
+            WatchService watchService = FileSystems.getDefault().newWatchService();
+
+            Paths.get("C:\\filetest\\user").register(watchService,
+                    StandardWatchEventKinds.ENTRY_DELETE,
+                    StandardWatchEventKinds.ENTRY_CREATE,
+                    StandardWatchEventKinds.ENTRY_MODIFY);
+
+            while (true) {
+                WatchKey key = watchService.take();
+                for (WatchEvent watchEvent : key.pollEvents()) {
+                    System.out.println(watchEvent.context() + "文件发生了" + watchEvent.kind() + "事件");
+                }
+
+                boolean valid = key.reset();
+                if(!valid){
+                    break;
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
