@@ -2,6 +2,7 @@ package com.wb.wbao.server.user;
 
 import com.wb.wbao.common.FileUtils;
 import com.wb.wbao.common.PasswordHelper;
+import com.wb.wbao.common.concurrent.MamboExecutors;
 import com.wb.wbao.dto.UserDTO;
 import com.wb.wbao.server.email.EmailMgrImpl;
 import com.wb.wbao.server.permission.Permission;
@@ -13,9 +14,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.mail.MessagingException;
+import java.io.IOException;
+import java.nio.file.*;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 @Service("userMgr")
@@ -33,6 +38,48 @@ public class UserMgrImpl implements UserMgr {
     private PasswordHelper passwordHelper = new PasswordHelper();
 
     private Logger logger = LoggerFactory.getLogger(UserMgrImpl.class);
+
+
+    /**
+     * 检测文件变化
+     */
+    @PostConstruct
+    private void init() {
+        MamboExecutors.get().getIoBoundService().submit(this::watchFileChange);
+    }
+
+    private void watchFileChange(){
+
+        try {
+            WatchService watchService = FileSystems.getDefault().newWatchService();
+
+            Paths.get("C:\\filetest").register(watchService,
+                    StandardWatchEventKinds.ENTRY_DELETE,
+                    StandardWatchEventKinds.ENTRY_CREATE,
+                    StandardWatchEventKinds.ENTRY_MODIFY);
+
+            while (true) {
+                WatchKey key = watchService.take();
+                for (WatchEvent watchEvent : key.pollEvents()) {
+                    System.out.println(watchEvent.context() + "文件发生了" + watchEvent.kind() + "事件");
+                    this.queryAll();
+                }
+
+                boolean valid = key.reset();
+                if(!valid){
+                    break;
+                }
+
+                TimeUnit.SECONDS.sleep(2);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     @Override
     public List<UserDTO> queryAll() {

@@ -21,14 +21,17 @@ public class NIO2Test {
     }
 
     /**
-     * 监控文件变化，貌似只能检测到一级子目录的删除事件
+     * 监控文件变化，貌似只能检测到二级子目录的增删改事件。
+     *
+     * 也就是说，能检测到C:/filetest/user下面文件或文件夹的增删改动作，但是二级目录下的文件变化不能明确检测到具体的文件和动作类型
+     * 能准确检测到一级目录C:/filetest下文件或文件夹得具体文件及其变动
      */
     private static void testWatchService() {
 
         try {
             WatchService watchService = FileSystems.getDefault().newWatchService();
 
-            Paths.get("C:\\filetest\\user").register(watchService,
+            Paths.get("C:\\filetest").register(watchService,
                     StandardWatchEventKinds.ENTRY_DELETE,
                     StandardWatchEventKinds.ENTRY_CREATE,
                     StandardWatchEventKinds.ENTRY_MODIFY);
