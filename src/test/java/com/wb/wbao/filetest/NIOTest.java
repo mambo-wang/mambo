@@ -23,16 +23,18 @@ public class NIOTest {
         testChannelReadMethod();
     }
 
-    /** 读取大文件时，使用Channel和Buffer传统的 用竹筒多次取水的方式 */
+    /** 读取大文件时，使用Channel和Buffer传统的 用竹筒多次取水的方式
+     * read方法
+     * */
     private static void testChannelReadMethod() {
 
         System.out.println(Utils.formatFullDateTime(System.currentTimeMillis()));
         try (FileInputStream fis = new FileInputStream("C:\\Users\\Administrator\\Downloads\\ideaIU-2017.2.exe");
-             FileChannel fcin = fis.getChannel();
+             FileChannel inChannel = fis.getChannel();
              FileChannel outChannel = new FileOutputStream("C:/filetest/newdir/stu-ideaIU-2017.2.exe").getChannel()){
 
             ByteBuffer bbuff = ByteBuffer.allocate(1024);
-            while (fcin.read(bbuff) != -1) {
+            while (inChannel.read(bbuff) != -1) {
                 bbuff.flip();
                 outChannel.write(bbuff);
                 bbuff.clear();
@@ -48,6 +50,9 @@ public class NIOTest {
 
     }
 
+    /**
+     * 复制文件内容并追加到该文件尾部,position,map
+     */
     private static void testRandomFileChannel() {
         File f = new File("C:/filetest/newdir/a.txt");
 
@@ -68,6 +73,9 @@ public class NIOTest {
 
     }
 
+    /**
+     * 测试FileChannel,map,writer
+     */
     private static void testFileChannel() {
         File f = new File("C:/filetest/newdir/test.txt");
 
@@ -92,6 +100,9 @@ public class NIOTest {
         }
     }
 
+    /**
+     * 测试Buffer缓冲队列
+     */
     private static void testBuffer() {
 
         /* 创建buffer */

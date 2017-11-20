@@ -14,9 +14,9 @@ public class NIO2Test {
 
 //        testPathsMethod();
 
-//        testFilesMethod();
+        testFilesMethod();
 
-        testWatchService();
+//        testWatchService();
 
     }
 
@@ -96,6 +96,9 @@ public class NIO2Test {
 
     }
 
+    /**
+     * 测试Paths工具类
+     */
     private static void testPathsMethod() {
         Path path = Paths.get("C:\\filetest\\user");
 

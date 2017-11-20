@@ -11,7 +11,7 @@ public class IOTest {
 
 //        testFileMethod();
 
-//        testInputStreamAndOutputStream();
+        testInputStreamAndOutputStream();
 
 //        testReader();
 
@@ -23,7 +23,7 @@ public class IOTest {
 
 //        testReadFromProcess();
 
-        testRandomAccessFile();
+//        testRandomAccessFile();
 
 //        testObjectOutputStream();
     }
@@ -181,12 +181,16 @@ public class IOTest {
             /** 本地读取的字节数量 */
             int hasRead = 0;
 
-            /** 读 */
+            /** 写单个字节 */
+            fos.write(70);
+            fos.write(71);
+
+            /** 读多个字节 */
             while ((hasRead = fis.read(bbuf)) > 0) {
 
                 System.out.println(new String(bbuf, 0, hasRead));
 
-                /** 写 */
+                /** 写 多个字节*/
                 fos.write(bbuf, 0, hasRead);
 
             }
@@ -220,7 +224,7 @@ public class IOTest {
 //        File file = new File("C:\\filetest\\newFile2.txt");
 
         /** 获取文件-相对路径 */
-//        File file = new File(".");
+//        File file = new File(".\\test.txt");
 
         /** 获取文件夹 */
         File file = new File("C:\\filetest\\newdir");
@@ -232,19 +236,24 @@ public class IOTest {
         /** File类的各种方法 */
         System.out.println("name:" + file.getName());
         System.out.println("path:" + file.getPath());
+        /** 绝对路径 */
         System.out.println("absoluteFile:" + file.getAbsoluteFile());
         System.out.println("absolutePath:" + file.getAbsolutePath());
+
         System.out.println("parent:" + file.getParent());
         System.out.println("exists:" + file.exists());
         System.out.println("canWrite:" + file.canWrite());
+
+        /** 是文件还是文件夹 */
         System.out.println("isFile:" + file.isFile());
         System.out.println("isDirectory:" + file.isDirectory());
+
         System.out.println("isAbsolute:" + file.isAbsolute());
         System.out.println("lastModified:" + file.lastModified());
         System.out.println("length:" + file.length());
 
         /** 重命名文件，路径也可以重新定义 */
-//        System.out.println("rename:" + file.renameTo(new File("C:\\newFile2.txt")));
+        System.out.println("rename:" + file.renameTo(new File("C:\\newFile2.txt")));
 
         /** 删除文件或者文件夹 */
 //        System.out.println("delete:" + file.delete());
