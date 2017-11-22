@@ -1,5 +1,6 @@
 package com.wb.wbao.filetest;
 
+import com.wb.wbao.common.Utils;
 import com.wb.wbao.server.user.User;
 
 import java.io.*;
@@ -174,28 +175,32 @@ public class IOTest {
      */
     private static void testInputStreamAndOutputStream() throws IOException {
 
-        try (FileInputStream fis = new FileInputStream("C:/filetest/user/user-1/FileTest.java");
-             FileOutputStream fos = new FileOutputStream("C:/filetest/user/user-1/FileOutTest.txt")){
-            byte[] bbuf = new byte[20];
+
+        try (FileInputStream fis = new FileInputStream("C:/filetest/user/user-1/ChromeStandalone_61.0.3163.91_Setup.exe");
+             BufferedInputStream bis = new BufferedInputStream(fis);
+             FileOutputStream fos = new FileOutputStream("C:/filetest/user/user-19/ChromeStandalone_61.0.3163.91_Setup.exe");
+             BufferedOutputStream bos = new BufferedOutputStream(fos)){
+
+            long before = System.currentTimeMillis();
+
+            byte[] bbuf = new byte[1024];
 
             /** 本地读取的字节数量 */
             int hasRead = 0;
 
-            /** 写单个字节 */
-            fos.write(70);
-            fos.write(71);
-
             /** 读多个字节 */
             while ((hasRead = fis.read(bbuf)) > 0) {
 
-                System.out.println(new String(bbuf, 0, hasRead));
-
                 /** 写 多个字节*/
                 fos.write(bbuf, 0, hasRead);
-
             }
+            System.out.println(System.currentTimeMillis() - before);
+
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            File file = new File("C:/filetest/user/user-19/ChromeStandalone_61.0.3163.91_Setup.exe");
+            file.delete();
         }
     }
 

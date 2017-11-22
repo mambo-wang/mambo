@@ -28,25 +28,27 @@ public class NIOTest {
      * */
     private static void testChannelReadMethod() {
 
-        System.out.println(Utils.formatFullDateTime(System.currentTimeMillis()));
-        try (FileInputStream fis = new FileInputStream("C:\\Users\\Administrator\\Downloads\\ideaIU-2017.2.exe");
+        try (FileInputStream fis = new FileInputStream("C:/filetest/user/user-1/ChromeStandalone_61.0.3163.91_Setup.exe");
              FileChannel inChannel = fis.getChannel();
-             FileChannel outChannel = new FileOutputStream("C:/filetest/newdir/stu-ideaIU-2017.2.exe").getChannel()){
+             FileChannel outChannel = new FileOutputStream("C:/filetest/user/user-19/ChromeStandalone_61.0.3163.91_Setup.exe").getChannel()){
 
+            long before = System.currentTimeMillis();
             ByteBuffer bbuff = ByteBuffer.allocate(1024);
             while (inChannel.read(bbuff) != -1) {
                 bbuff.flip();
                 outChannel.write(bbuff);
                 bbuff.clear();
             }
+            System.out.println(System.currentTimeMillis() - before);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            File file = new File("C:/filetest/user/user-19/ChromeStandalone_61.0.3163.91_Setup.exe");
+            file.delete();
         }
-        System.out.println(Utils.formatFullDateTime(System.currentTimeMillis()));
-
 
     }
 
@@ -77,26 +79,32 @@ public class NIOTest {
      * 测试FileChannel,map,writer
      */
     private static void testFileChannel() {
-        File f = new File("C:/filetest/newdir/test.txt");
+        File f = new File("C:/filetest/user/user-1/ChromeStandalone_61.0.3163.91_Setup.exe");
 
         try(FileChannel inChannel = new FileInputStream(f).getChannel();
-            FileChannel outChannel = new FileOutputStream("C:/filetest/newdir/a.txt").getChannel()){
+            FileChannel outChannel = new FileOutputStream("C:/filetest/user/user-19/ChromeStandalone_61.0.3163.91_Setup.exe").getChannel()){
 
+            long before = System.currentTimeMillis();
             //将FileChannel里所有数据映射成ByteBuffer
             MappedByteBuffer buffer = inChannel.map(FileChannel.MapMode.READ_ONLY, 0, f.length());
-            Charset charset = Charset.forName("GBK");
             outChannel.write(buffer);
             buffer.clear();
-            CharsetDecoder decoder = charset.newDecoder();
-            //把ByteBuffer转换为CharBuffer
-            CharBuffer charBuffer = decoder.decode(buffer);
+            System.out.println(System.currentTimeMillis() - before);
 
-            System.out.println(charBuffer);
+//            Charset charset = Charset.forName("GBK");
+//            CharsetDecoder decoder = charset.newDecoder();
+//            //把ByteBuffer转换为CharBuffer
+//            CharBuffer charBuffer = decoder.decode(buffer);
+//
+//            System.out.println(charBuffer);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            File file = new File("C:/filetest/user/user-19/ChromeStandalone_61.0.3163.91_Setup.exe");
+            file.delete();
         }
     }
 
