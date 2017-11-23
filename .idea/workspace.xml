@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ceabb6c0-6880-4a8c-9897-84b5c88a918f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/wb/wbao/Test.class" afterPath="$PROJECT_DIR$/target/test-classes/com/wb/wbao/Test.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIO2Test.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIO2Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIOTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIOTest.java" />
     </list>
     <ignored path="girl.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="IOTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1775">
-              <caret line="182" column="0" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+            <state relative-caret-position="149">
+              <caret line="230" column="61" lean-forward="true" selection-start-line="230" selection-start-column="61" selection-end-line="230" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -42,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIOTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-852">
-              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIO2Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-89">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,7 +85,7 @@
         <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/nio/HeapByteBuffer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="57" column="10" lean-forward="true" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+              <caret line="57" column="10" lean-forward="false" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -206,8 +204,8 @@
         <option value="$PROJECT_DIR$/test.txt" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIOTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIO2Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java" />
       </list>
     </option>
   </component>
@@ -396,7 +394,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NIO2Test">
+  <component name="RunManager" selected="Application.IOTest">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wb.wbao.Application" />
@@ -915,8 +913,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.NIO2Test" />
-        <item index="1" class="java.lang.String" itemvalue="Application.IOTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.IOTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.NIO2Test" />
         <item index="2" class="java.lang.String" itemvalue="Application.NIOTest" />
         <item index="3" class="java.lang.String" itemvalue="Application.Test" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.FileMgrTest.testClearDir" />
@@ -967,13 +965,6 @@
       <workItem from="1510231277723" duration="21868000" />
       <workItem from="1510619896269" duration="37033000" />
       <workItem from="1510795040841" duration="62596000" />
-    </task>
-    <task id="LOCAL-00011" summary="Java设计模式--工厂方法模式">
-      <created>1504610847397</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1504610847397</updated>
     </task>
     <task id="LOCAL-00012" summary="数据库连接--mysql，修改POM，单元测试">
       <created>1504684088186</created>
@@ -1311,7 +1302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511341470732</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="时间：11月23日：1、测试类">
+      <created>1511417746765</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1511417746765</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1347,7 +1345,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="386719000" />
+    <option name="totallyTimeSpent" value="387471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1616" height="876" extended-state="6" />
@@ -1362,7 +1360,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33243242" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42972973" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32567567" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1464,7 +1462,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="时间：9月20日&#10;改动：1、shiro开发，开涛博客，第二章，账号认证。" />
     <MESSAGE value="时间：9月20日&#10;改动：1、shiro开发，开涛博客第三章，基于角色的访问控制（隐式角色）。" />
     <MESSAGE value="时间：9月20日&#10;改动：1、shiro开发，开涛博客第三章，基于资源的访问控制（显示角色）。" />
     <MESSAGE value="时间：9月21日&#10;改动：1、shiro开发，开涛博客第六章，（1）实战实现认证，修改了过滤器，（2）制作网站图标。" />
@@ -1489,7 +1486,8 @@
     <MESSAGE value="时间：11月16日：1、监控文件变化 2、Webuploader插件" />
     <MESSAGE value="时间：11月20日：1、加注释" />
     <MESSAGE value="时间：11月22日：1、测试类" />
-    <option name="LAST_COMMIT_MESSAGE" value="时间：11月22日：1、测试类" />
+    <MESSAGE value="时间：11月23日：1、测试类" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间：11月23日：1、测试类" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1863,7 +1861,7 @@
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/nio/HeapByteBuffer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="57" column="10" lean-forward="true" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+          <caret line="57" column="10" lean-forward="false" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1898,7 +1896,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIOTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-852">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1908,15 +1906,15 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/NIO2Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-89">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/filetest/IOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1775">
-          <caret line="182" column="0" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+        <state relative-caret-position="149">
+          <caret line="230" column="61" lean-forward="true" selection-start-line="230" selection-start-column="61" selection-end-line="230" selection-end-column="61" />
           <folding />
         </state>
       </provider>

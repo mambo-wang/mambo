@@ -10,9 +10,9 @@ public class IOTest {
 
     public static void main(String[] args) throws IOException {
 
-//        testFileMethod();
+        testFileMethod();
 
-        testInputStreamAndOutputStream();
+//        testInputStreamAndOutputStream();
 
 //        testReader();
 
@@ -218,6 +218,8 @@ public class IOTest {
                 .map(File::getAbsolutePath)
                 .forEach(System.out::println);
 
+        System.out.println("============C盘所有子目录：=========");
+
         /** 列出所有子目录 */
         String[] fileLists = files[0].list();
         assert fileLists != null;
@@ -258,16 +260,18 @@ public class IOTest {
         System.out.println("length:" + file.length());
 
         /** 重命名文件，路径也可以重新定义 */
-        System.out.println("rename:" + file.renameTo(new File("C:\\newFile2.txt")));
+//        System.out.println("rename:" + file.renameTo(new File("C:\\newFile2.txt")));
 
         /** 删除文件或者文件夹 */
 //        System.out.println("delete:" + file.delete());
         System.out.println("====================================================");
 
         /** 文件过滤器 */
-        String[] strings = file.list(((dir, name) -> name.endsWith(".txt") &&
-                !new File(dir.getAbsolutePath() + "\\" + name).isDirectory()));
-        Arrays.stream(strings).forEach(System.out::println);
+        if(file.exists() && file.isDirectory()){
+            String[] strings = file.list(((dir, name) -> name.endsWith(".txt") &&
+                    !new File(dir.getAbsolutePath() + "\\" + name).isDirectory()));
+            Arrays.stream(strings).forEach(System.out::println);
+        }
     }
 
     @Override
