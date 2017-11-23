@@ -183,16 +183,16 @@ public class IOTest {
 
             long before = System.currentTimeMillis();
 
-            byte[] bbuf = new byte[1024];
+            byte[] bbuf = new byte[8196];
 
             /** 本地读取的字节数量 */
             int hasRead = 0;
 
             /** 读多个字节 */
-            while ((hasRead = fis.read(bbuf)) > 0) {
+            while ((hasRead = bis.read(bbuf)) > 0) {
 
                 /** 写 多个字节*/
-                fos.write(bbuf, 0, hasRead);
+                bos.write(bbuf, 0, hasRead);
             }
             System.out.println(System.currentTimeMillis() - before);
 

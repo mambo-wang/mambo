@@ -33,7 +33,8 @@ public class NIOTest {
              FileChannel outChannel = new FileOutputStream("C:/filetest/user/user-19/ChromeStandalone_61.0.3163.91_Setup.exe").getChannel()){
 
             long before = System.currentTimeMillis();
-            ByteBuffer bbuff = ByteBuffer.allocate(1024);
+//            ByteBuffer bbuff = ByteBuffer.allocate(1024*1024);
+            ByteBuffer bbuff = ByteBuffer.allocateDirect(1024*1024);
             while (inChannel.read(bbuff) != -1) {
                 bbuff.flip();
                 outChannel.write(bbuff);
@@ -114,24 +115,26 @@ public class NIOTest {
     private static void testBuffer() {
 
         /* 创建buffer */
-        CharBuffer buff = CharBuffer.allocate(8);
+        CharBuffer buff = CharBuffer.allocate(10);
 
         System.out.println("capacity:" + buff.capacity());
         System.out.println("limit:" + buff.limit());
         System.out.println("position:" + buff.position());
 
+        buff.put('d');
         buff.put('c');
         buff.put('b');
         buff.put('a');
 
-        System.out.println("放入三个元素后，position:" + buff.position());
-        System.out.println("放入三个元素后，limit:" + buff.limit());
+        System.out.println("放入四个元素后，position:" + buff.position());
+        System.out.println("放入四个元素后，limit:" + buff.limit());
 
         //为从buffer中取元素做好准备
         buff.flip();
 
         System.out.println("执行flip()方法后，limit:" + buff.limit());
         System.out.println("执行flip()方法后，position:" + buff.position());
+        System.out.println("执行flip()方法后，remaining:" + buff.remaining());
 
         System.out.println("第一个元素" + buff.get());
         System.out.println("取出第一个元素后，position:" + buff.position());
@@ -139,10 +142,12 @@ public class NIOTest {
         //为再次向buffer中放入元素做准备
         buff.clear();
 
+        System.out.println("执行clear()方法后，remaining:" + buff.remaining());
         System.out.println("执行clear()方法后，limit:" + buff.limit());
         System.out.println("执行clear()方法后，position:" + buff.position());
         System.out.println("执行clear()方法后，缓冲区第三个元素为:" + buff.get(2));
         System.out.println("执行按索引读取后，position:" + buff.position());
+
 
 
     }

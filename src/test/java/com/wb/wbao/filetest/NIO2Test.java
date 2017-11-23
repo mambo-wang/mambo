@@ -14,9 +14,9 @@ public class NIO2Test {
 
 //        testPathsMethod();
 
-        testFilesMethod();
+//        testFilesMethod();
 
-//        testWatchService();
+        testWatchService();
 
     }
 
@@ -81,7 +81,7 @@ public class NIO2Test {
 
             /**获取文件列表*/
             Files.list(Paths.get("C:\\filetest\\user")).forEach(System.out::println);
-            /** 读取文件内容 */
+            /** 读取文件内容，返回Stream流 */
             Files.lines(Paths.get("C:\\filetest\\user\\readme.txt"), Charset.forName("gbk")).forEach(System.out::println);
 
             /** 获取存储信息 */
@@ -101,6 +101,7 @@ public class NIO2Test {
      */
     private static void testPathsMethod() {
         Path path = Paths.get("C:\\filetest\\user");
+//        Path path = Paths.get(".\\filetest\\user");
 
         System.out.println("path里包含的路径数量：" + path.getNameCount());
         System.out.println("path的根路径：" + path.getRoot());
