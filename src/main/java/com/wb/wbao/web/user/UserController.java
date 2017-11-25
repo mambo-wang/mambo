@@ -31,6 +31,11 @@ public class UserController {
 
     Logger logger = LoggerFactory.getLogger(UserController.class);
 
+    @GetMapping(value = "/rest/{id}")
+    public User queryRestUser(@PathVariable Long id){
+        return this.restTemplate.getForObject("http://localhost:888/mambo/user/" + id, User.class);
+    }
+
     @GetMapping(value = "/{id}")
     public User queryById(@PathVariable Long id){
         return userMgr.queryUserById(id);
