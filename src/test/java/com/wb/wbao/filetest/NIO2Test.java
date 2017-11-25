@@ -70,6 +70,10 @@ public class NIO2Test {
             List<String> lines = Files.readAllLines(Paths.get("C:\\filetest\\user\\readme.txt"), Charset.forName("gbk"));
             System.out.println(lines);
 
+            /** 读取文件 */
+            byte[] bytes = Files.readAllBytes(Paths.get("C:\\filetest\\user\\readme.txt"));
+            System.out.println(bytes);
+
             System.out.println("readme文件的大小为：" + Files.size(Paths.get("C:\\filetest\\user\\readme.txt")));
 
             /** 写入文件 */

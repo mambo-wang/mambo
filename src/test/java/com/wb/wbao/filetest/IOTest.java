@@ -10,7 +10,7 @@ public class IOTest {
 
     public static void main(String[] args) throws IOException {
 
-        testFileMethod();
+//        testFileMethod();
 
 //        testInputStreamAndOutputStream();
 
@@ -24,7 +24,7 @@ public class IOTest {
 
 //        testReadFromProcess();
 
-//        testRandomAccessFile();
+        testRandomAccessFile();
 
 //        testObjectOutputStream();
     }
@@ -68,6 +68,7 @@ public class IOTest {
 
             //移动到某一个位置，raf.length()表示移动到最后
             raf.seek(raf.length());
+            System.out.println("pointer 初始位置：" + raf.getFilePointer());
             byte[] bbuf = new byte[1024];
             int hasRead = 0;
 
@@ -183,7 +184,7 @@ public class IOTest {
 
             long before = System.currentTimeMillis();
 
-            byte[] bbuf = new byte[8196];
+            byte[] bbuf = new byte[10240];
 
             /** 本地读取的字节数量 */
             int hasRead = 0;
@@ -228,13 +229,13 @@ public class IOTest {
         System.out.println("=========================================================");
 
         /** 获取文件-绝对路径 */
-//        File file = new File("C:\\filetest\\newFile2.txt");
+        File file = new File("C:\\filetest\\newFile2.txt");
 
         /** 获取文件-相对路径 */
 //        File file = new File(".\\test.txt");
 
         /** 获取文件夹 */
-        File file = new File("C:\\filetest\\newdir");
+//        File file = new File("C:\\filetest\\newdir");
         /** 创建文件夹 */
         System.out.println("mkDir:" + file.mkdir());
         /** 创建文件 */
@@ -269,7 +270,7 @@ public class IOTest {
         /** 文件过滤器 */
         if(file.exists() && file.isDirectory()){
             String[] strings = file.list(((dir, name) -> name.endsWith(".txt") &&
-                    !new File(dir.getAbsolutePath() + "\\" + name).isDirectory()));
+                    !new File(dir.getAbsolutePath() + "/" + name).isDirectory()));
             Arrays.stream(strings).forEach(System.out::println);
         }
     }

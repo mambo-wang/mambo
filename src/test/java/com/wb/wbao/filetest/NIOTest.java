@@ -18,6 +18,8 @@ public class NIOTest {
 
 //        testFileChannel();
 
+//        testFileChannelTransfer();
+
 //        testRandomFileChannel();
 
         testChannelReadMethod();
@@ -79,6 +81,30 @@ public class NIOTest {
     /**
      * 测试FileChannel,map,writer
      */
+    private static void testFileChannelTransfer() {
+        File f = new File("C:/filetest/user/user-1/ChromeStandalone_61.0.3163.91_Setup.exe");
+
+        try(FileChannel inChannel = new FileInputStream(f).getChannel();
+            FileChannel outChannel = new FileOutputStream("C:/filetest/user/user-19/ChromeStandalone_61.0.3163.91_Setup.exe").getChannel()){
+
+            long before = System.currentTimeMillis();
+//            inChannel.transferTo(0, inChannel.size(), outChannel);
+            outChannel.transferFrom(inChannel, 0 ,inChannel.size());
+            System.out.println(System.currentTimeMillis() - before);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            File file = new File("C:/filetest/user/user-19/ChromeStandalone_61.0.3163.91_Setup.exe");
+            file.delete();
+        }
+    }
+
+    /**
+     * 测试FileChannel,map,writer
+     */
     private static void testFileChannel() {
         File f = new File("C:/filetest/user/user-1/ChromeStandalone_61.0.3163.91_Setup.exe");
 
@@ -104,8 +130,8 @@ public class NIOTest {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            File file = new File("C:/filetest/user/user-19/ChromeStandalone_61.0.3163.91_Setup.exe");
-            file.delete();
+//            File file = new File("C:/filetest/user/user-19/ChromeStandalone_61.0.3163.91_Setup.exe");
+//            file.delete();
         }
     }
 

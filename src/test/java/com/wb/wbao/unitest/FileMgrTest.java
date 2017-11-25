@@ -21,9 +21,11 @@ public class FileMgrTest {
 
     @Test
     public void testListFiles(){
-        List<FileDTO> dtos = fileMgr.getFiles(Constant.USER_PERSONAL, false);
+        List<FileDTO> dtos = fileMgr.getFiles(Constant.USER_PERSONAL, true);
 
-        System.out.println(dtos);
+        System.out.println("===============start==============");
+        dtos.forEach(System.out::println);
+        System.out.println("===============end==============");
 
     }
 
