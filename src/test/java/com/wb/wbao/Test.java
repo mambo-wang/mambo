@@ -12,10 +12,12 @@ public class Test {
 
     public static void main(String[] args) {
 
-        testBean();
+//        testBean();
 
 //        testArray();
 
+        Long haha = -1L;
+        System.out.println(haha.toString());
     }
 
     private static void testBean(){

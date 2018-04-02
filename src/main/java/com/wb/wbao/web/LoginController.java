@@ -1,5 +1,6 @@
 package com.wb.wbao.web;
 
+import com.wb.wbao.common.annotation.Loggable;
 import com.wb.wbao.dto.CommonDTO;
 import com.wb.wbao.dto.UserDTO;
 import com.wb.wbao.server.session.SessionMgr;
@@ -28,6 +29,7 @@ public class LoginController {
     @Resource
     private SessionMgr sessionMgr;
 
+    @Loggable(describe = "跳转到登录界面", optType = "QUERY", module = "login")
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public ModelAndView login(ModelAndView mv) {
         mv.setViewName(SIGN_IN_PAGE);
@@ -41,6 +43,7 @@ public class LoginController {
      * @param user
      * @return
      */
+    @Loggable(describe = "登录", optType = "POST", module = "login")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
     public CommonDTO login(@RequestBody User user) {

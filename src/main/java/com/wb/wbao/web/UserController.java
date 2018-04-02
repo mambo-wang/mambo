@@ -1,5 +1,6 @@
-package com.wb.wbao.web.user;
+package com.wb.wbao.web;
 
+import com.wb.wbao.common.annotation.Loggable;
 import com.wb.wbao.dto.UserDTO;
 import com.wb.wbao.server.user.User;
 import com.wb.wbao.server.user.UserMgr;
@@ -57,10 +58,11 @@ public class UserController {
         return userMgr.queryAll();
     }
 
+    @Loggable(describe = "查询所有用户", optType = "QUERY", module = "USER")
     @ApiOperation(value = "查询用户", notes = "查询所有用户")
     @GetMapping
     @RequiresPermissions("user:view")
-    public List<UserDTO> queryAllUsers() {
+    public List<UserDTO> queryAllUsers() throws Exception {
         UserDTO loginUser = userMgr.queryLoginUser();
         return userMgr.queryAll();
     }
