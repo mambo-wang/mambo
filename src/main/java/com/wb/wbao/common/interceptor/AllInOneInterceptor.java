@@ -14,7 +14,7 @@ public class AllInOneInterceptor extends HandlerInterceptorAdapter{
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         long start = System.currentTimeMillis();
         timeThreadLocal.set(start);
-        System.out.println("==========start time: " + start + "==========");
+        System.out.println("==========拦截器start time: " + start + "==========");
         return true;
     }
 
@@ -23,6 +23,6 @@ public class AllInOneInterceptor extends HandlerInterceptorAdapter{
         long end = System.currentTimeMillis();
         long start = timeThreadLocal.get();
         long consumeTime = end-start;
-        System.out.println("==============spend time:" + consumeTime + "========================");
+        System.out.println("==============拦截器spend time:" + consumeTime + "========================");
     }
 }
