@@ -34,7 +34,7 @@ public class UserController {
 
     @GetMapping(value = "/rest/{id}")
     public User queryRestUser(@PathVariable Long id){
-        return this.restTemplate.getForObject("http://localhost:888/mambo/user/" + id, User.class);
+        return this.restTemplate.getForObject("http://localhost:8888/mambo/user/" + id, User.class);
     }
 
     @GetMapping(value = "/{id}")
