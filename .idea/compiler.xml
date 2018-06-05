@@ -23,6 +23,7 @@
     <bytecodeTargetLevel>
       <module name="girl" target="1.8" />
       <module name="mambo" target="1.8" />
+      <module name="springcloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

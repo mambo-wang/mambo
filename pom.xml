@@ -34,6 +34,7 @@
         <gson.version>2.5</gson.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.taget>${java.version}</maven.compiler.taget>
+        <jedis.version>2.9.0</jedis.version>
     </properties>
 
     <!--spring boot 父级依赖-->
@@ -223,6 +224,12 @@
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-quartz</artifactId>
             <version>${shiro.version}</version>
+        </dependency>
+        <!--操作redis-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
         </dependency>
 
     </dependencies>
