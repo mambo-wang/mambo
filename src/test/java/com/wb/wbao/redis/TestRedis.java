@@ -79,7 +79,7 @@ public class TestRedis {
             String key = iterator.next();
             System.out.println(key + ":" + jedis.hmget("user", key));
         }
-        jedis.del("user");
+//        jedis.del("user");
         System.out.println("删除后是否存在key为user的记录:" + jedis.exists("user"));//是否存在key为user的记录
 
         /**
@@ -116,7 +116,7 @@ public class TestRedis {
         //jedis.llen获取长度，-1表示取得所有
         System.out.println("javaFramework:"+jedis.lrange("javaFramework",0,-1));
 
-        jedis.del("javaFramework");
+//        jedis.del("javaFramework");
         System.out.println("删除后长度:"+jedis.llen("javaFramework"));
         System.out.println(jedis.lrange("javaFramework",0,-1));
 
@@ -136,18 +136,19 @@ public class TestRedis {
     @Test
     public void testSet(){
         //添加
-        jedis.sadd("user","chenhaoxiang");
-        jedis.sadd("user","hu");
-        jedis.sadd("user","chen");
-        jedis.sadd("user","xiyu");
-        jedis.sadd("user","chx");
-        jedis.sadd("user","are");
+        jedis.sadd("users","chenhaoxiang");
+        jedis.sadd("users","hu");
+        jedis.sadd("users","chen");
+        jedis.sadd("users","chen");
+        jedis.sadd("users","xiyu");
+        jedis.sadd("users","chx");
+        jedis.sadd("users","are");
         //移除user集合中的元素are
-        jedis.srem("user","are");
-        System.out.println("user中的value:"+jedis.smembers("user"));//获取所有加入user的value
-        System.out.println("chx是否是user中的元素:"+jedis.sismember("user","chx"));//判断chx是否是user集合中的元素
-        System.out.println("集合中的一个随机元素:"+jedis.srandmember("user"));//返回集合中的一个随机元素
-        System.out.println("user中元素的个数:"+jedis.scard("user"));
+        jedis.srem("users","are");
+        System.out.println("users中的value:"+jedis.smembers("users"));//获取所有加入user的value
+        System.out.println("chx是否是users中的元素:"+jedis.sismember("users","chx"));//判断chx是否是user集合中的元素
+        System.out.println("集合中的一个随机元素:"+jedis.srandmember("users"));//返回集合中的一个随机元素
+        System.out.println("users中元素的个数:"+jedis.scard("users"));
         /**
          *
          连接服务成功
@@ -174,7 +175,7 @@ public class TestRedis {
         System.out.println(jedis.lrange("number",0,jedis.llen("number")));
         System.out.println("排序:"+jedis.sort("number"));
         System.out.println(jedis.lrange("number",0,-1));//不改变原来的排序
-        jedis.del("number");//测试完删除数据
+//        jedis.del("number");//测试完删除数据
 
         /**
          连接服务成功

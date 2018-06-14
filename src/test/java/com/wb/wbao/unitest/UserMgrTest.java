@@ -24,6 +24,7 @@ public class UserMgrTest {
     @Test
     public void getUser() {
         User user = userMgr.queryUserById(1L);
+        System.out.println("hashcode方法的返回值是：" +user.hashCode());
         Assert.assertEquals(user.getLoginName(), "admin");
     }
 

@@ -6,9 +6,7 @@ import redis.clients.jedis.JedisPoolConfig;
 
 /**
  * Created with IntelliJ IDEA.
- * User: 陈浩翔.
- * Date: 2017/3/4.
- * Time: 下午 10:14.
+ * User: wangbao
  * Explain:Redis连接池
  */
 public final class RedisPool {
