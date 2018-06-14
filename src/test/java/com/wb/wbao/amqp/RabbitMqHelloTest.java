@@ -1,6 +1,7 @@
 package com.wb.wbao.amqp;
 
 import com.wb.wbao.server.amqp.HelloSender;
+import com.wb.wbao.server.amqp.NeoSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,30 @@ public class RabbitMqHelloTest {
     @Autowired
     private HelloSender helloSender;
 
+    @Autowired
+    private NeoSender neoSender;
+
     @Test
     public void hello() throws Exception {
-        helloSender.send();
+//        helloSender.send();
         Thread.sleep(1000l);
+    }
+
+    @Test
+    public void oneToMany() throws Exception {
+        for (int i=0;i<100;i++){
+            helloSender.send(i);
+        }
+        Thread.sleep(10000l);
+    }
+
+    @Test
+    public void manyToMany() throws Exception {
+        for (int i=0;i<100;i++){
+            neoSender.send(i);
+            helloSender.send(i);
+        }
+        Thread.sleep(10000l);
     }
 
 }
