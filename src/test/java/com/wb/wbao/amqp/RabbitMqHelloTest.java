@@ -1,5 +1,6 @@
 package com.wb.wbao.amqp;
 
+import com.wb.wbao.server.amqp.FanoutSenderA;
 import com.wb.wbao.server.amqp.HelloSender;
 import com.wb.wbao.server.amqp.NeoSender;
 import com.wb.wbao.server.amqp.TopicSender;
@@ -21,6 +22,9 @@ public class RabbitMqHelloTest {
 
     @Autowired
     private TopicSender topicSender;
+
+    @Autowired
+    private FanoutSenderA fanoutSenderA;
 
     @Test
     public void hello() throws Exception {
@@ -45,9 +49,24 @@ public class RabbitMqHelloTest {
         Thread.sleep(10000l);
     }
 
+    /**
+     *
+     * TODO 失败
+     * @throws Exception
+     */
     @Test
     public void topic1() throws Exception {
         topicSender.send1();
+        Thread.sleep(1000l);
+    }
+
+    /**
+     * TODO 失败
+     * @throws Exception
+     */
+    @Test
+    public void fanoutSender() throws Exception {
+        fanoutSenderA.send();
         Thread.sleep(1000l);
     }
 
