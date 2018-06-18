@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ceabb6c0-6880-4a8c-9897-84b5c88a918f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/config/FanoutRabbitConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/amqp/FanoutReceiverA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/amqp/FanoutReceiverB.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/amqp/FanoutReceiverC.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/amqp/FanoutSenderA.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/multithread/threadlocal/ThreadLocalDemo.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/wb/wbao/web/user/UserController.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wb/wbao/Application.class" afterPath="$PROJECT_DIR$/target/classes/com/wb/wbao/Application.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/wb/wbao/server/user/UserMgrImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/wb/wbao/server/user/UserMgrImpl.class" />
@@ -14,7 +10,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/wb/wbao/Test.class" afterPath="$PROJECT_DIR$/target/test-classes/com/wb/wbao/Test.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/wb/wbao/unitest/UserMgrTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/wb/wbao/unitest/UserMgrTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/wb/wbao/amqp/RabbitMqHelloTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/wb/wbao/amqp/RabbitMqHelloTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application-prod.properties" afterPath="$PROJECT_DIR$/target/classes/application-prod.properties" />
     </list>
     <ignored path="girl.iws" />
@@ -110,8 +105,8 @@
       <file leaf-file-name="RabbitMqHelloTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/amqp/RabbitMqHelloTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="747">
-              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,19 +114,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicRabbitConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wb/wbao/config/TopicRabbitConfig.java">
+      <file leaf-file-name="ThreadLocalDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/multithread/threadlocal/ThreadLocalDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="40" column="79" lean-forward="true" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
+            <state relative-caret-position="575">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#545#546#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#650#651#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-                <element signature="e#762#763#0" expanded="true" />
-                <element signature="e#814#815#0" expanded="true" />
+                <element signature="e#703#704#0" expanded="true" />
+                <element signature="e#743#744#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -230,7 +221,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/file/FileMgr.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/file/FileMgrImpl.java" />
         <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/role/Role.java" />
@@ -281,6 +271,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/amqp/FanoutReceiverB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wb/wbao/server/amqp/FanoutReceiverC.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/amqp/RabbitMqHelloTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/wb/wbao/multithread/threadlocal/ThreadLocalDemo.java" />
       </list>
     </option>
   </component>
@@ -442,18 +433,6 @@
               <item name="mambo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="wb" type="462c0819:PsiDirectoryNode" />
-              <item name="wbao" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="amqp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mambo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mambo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -506,6 +485,17 @@
               <item name="wb" type="462c0819:PsiDirectoryNode" />
               <item name="wbao" type="462c0819:PsiDirectoryNode" />
               <item name="amqp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mambo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mambo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="wb" type="462c0819:PsiDirectoryNode" />
+              <item name="wbao" type="462c0819:PsiDirectoryNode" />
+              <item name="multithread" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mambo" type="b2602c69:ProjectViewProjectNode" />
@@ -582,7 +572,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RabbitMqHelloTest.fanoutSender">
+  <component name="RunManager" selected="JUnit.RabbitMqHelloTest.topic1">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wb.wbao.Application" />
@@ -603,31 +593,6 @@
       <option name="PACKAGE_NAME" value="com.wb.wbao.amqp" />
       <option name="MAIN_CLASS_NAME" value="com.wb.wbao.amqp.RabbitMqHelloTest" />
       <option name="METHOD_NAME" value="fanoutSender" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="RabbitMqHelloTest.hello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.wb.wbao.amqp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="mambo" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.wb.wbao.amqp" />
-      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.amqp.RabbitMqHelloTest" />
-      <option name="METHOD_NAME" value="hello" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -714,6 +679,25 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration name="ThreadLocalDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.wb.wbao.multithread.threadlocal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.wb.wbao.multithread.threadlocal.ThreadLocalDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="mambo" />
+      <envs />
     </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -1117,19 +1101,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.hello" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.oneToMany" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.manyToMany" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.topic1" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.fanoutSender" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.oneToMany" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.manyToMany" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.topic1" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.fanoutSender" />
+      <item index="5" class="java.lang.String" itemvalue="Application.ThreadLocalDemo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.fanoutSender" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.topic1" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.manyToMany" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.oneToMany" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.hello" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.topic1" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ThreadLocalDemo" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.fanoutSender" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.manyToMany" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RabbitMqHelloTest.oneToMany" />
       </list>
     </recent_temporary>
   </component>
@@ -1186,14 +1170,7 @@
       <workItem from="1522394222525" duration="21580000" />
       <workItem from="1527414878815" duration="10045000" />
       <workItem from="1527597384389" duration="1834000" />
-      <workItem from="1527993069049" duration="17884000" />
-    </task>
-    <task id="LOCAL-00026" summary="时间：9月14日&#10;改动：1、发送模板邮件，测试通过。">
-      <created>1505379787825</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1505379787825</updated>
+      <workItem from="1527993069049" duration="20053000" />
     </task>
     <task id="LOCAL-00027" summary="时间：9月15日&#10;改动：1、shiro开发，创建需要的数据库表和实体类。">
       <created>1505475848817</created>
@@ -1531,7 +1508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528960554230</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="时间：6月14日：1、RabbitMQ学习，Fanout">
+      <created>1528961277223</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1528961277223</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1556,18 +1540,18 @@
     <history-entry file="RabbitMqHelloTest_topic1 - 2018.06.14 at 15h 16m 03s.xml">
       <configuration name="RabbitMqHelloTest.topic1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RabbitMqHelloTest_topic1 - 2018.06.18 at 11h 06m 47s.xml">
+      <configuration name="RabbitMqHelloTest.topic1" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="TestRedis_test - 2018.06.13 at 15h 51m 41s.xml">
       <configuration name="TestRedis.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestRedis_testSet - 2018.06.13 at 15h 51m 00s.xml">
-      <configuration name="TestRedis.testSet" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestRedis_testString - 2018.06.13 at 15h 52m 33s.xml">
       <configuration name="TestRedis.testString" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="476835000" />
+    <option name="totallyTimeSpent" value="479004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -1582,7 +1566,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24130435" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24130435" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2597826" sideWeight="0.4974293" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1590,7 +1574,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4293478" sideWeight="0.4974293" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18478261" sideWeight="0.4974293" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2249467" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1658,7 +1642,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="时间：11月11日：1、增删用户时增删对应的个人目录，2、练习File类相关用法" />
     <MESSAGE value="时间：11月13日：1、查询所有文件（文件夹）2、清空文件夹" />
     <MESSAGE value="时间：11月13日：1、文件过滤器" />
     <MESSAGE value="时间：11月13日：1、各种流，InputStream，Reader,Writer,PrintStream" />
@@ -1683,7 +1666,8 @@
     <MESSAGE value="时间：6月14日：1、RabbitMQ学习" />
     <MESSAGE value="时间：6月14日：1、RabbitMQ学习，多对多发消息" />
     <MESSAGE value="时间：6月14日：1、RabbitMQ学习，交换机和queue绑定" />
-    <option name="LAST_COMMIT_MESSAGE" value="时间：6月14日：1、RabbitMQ学习，交换机和queue绑定" />
+    <MESSAGE value="时间：6月14日：1、RabbitMQ学习，Fanout" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间：6月14日：1、RabbitMQ学习，Fanout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1696,13 +1680,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.3.RELEASE/spring-context-4.3.3.RELEASE-sources.jar!/org/springframework/context/ApplicationEventPublisher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="50" column="9" lean-forward="false" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_144/src.zip!/java/util/logging/Filter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
@@ -2006,9 +1983,9 @@
         <state relative-caret-position="300">
           <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#267#268#0" expanded="false" />
+            <element signature="e#306#307#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2018,9 +1995,9 @@
         <state relative-caret-position="250">
           <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#342#343#0" expanded="false" />
+            <element signature="e#398#399#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2030,9 +2007,9 @@
         <state relative-caret-position="250">
           <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#342#343#0" expanded="false" />
+            <element signature="e#398#399#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2062,13 +2039,13 @@
         <state relative-caret-position="397">
           <caret line="40" column="79" lean-forward="true" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#545#546#0" expanded="false" />
+            <element signature="e#604#605#0" expanded="false" />
+            <element signature="e#650#651#0" expanded="false" />
+            <element signature="e#710#711#0" expanded="false" />
+            <element signature="e#762#763#0" expanded="false" />
+            <element signature="e#814#815#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2170,10 +2147,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/multithread/threadlocal/ThreadLocalDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/wb/wbao/amqp/RabbitMqHelloTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
