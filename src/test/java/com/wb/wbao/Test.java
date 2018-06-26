@@ -8,6 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.web.client.RestTemplate;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Test {
@@ -18,21 +19,14 @@ public class Test {
 
 //        testArray();
 
-        User user = new User();
-        user.setLoginName("wbao");
-        user.setPassword("xxx");
 
-        System.out.println(user.hashCode());
+        String str = "wangbao";
 
-        HashMap<User, Integer> map = new HashMap<>();
-        map.put(user, 1);
+        System.out.println(new StringBuilder(str).reverse().toString());
 
-        User user2 = new User();
-        user2.setLoginName("wbao");
-        user2.setPassword("xxx");
-
-        System.out.println(map.get(user2));
-
+        char[] arr = str.toCharArray();
+        Arrays.sort(arr);
+        System.out.println(String.valueOf(arr));
 
 
     }
